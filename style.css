@@ -1860,11 +1860,10 @@
  }
 
  .blogSection {
+     /* border: 1px solid red; */
      width: 100%;
      height: 832px;
      background-color: rgba(254, 245, 230, 1);
-     /* border: 1px solid red; */
-     /* padding: 1px; */
  }
 
  .blogSection .blogContent {
@@ -1873,12 +1872,11 @@
      height: 832px;
      display: flex;
      flex-direction: column;
+     gap: 48px;
  }
 
  .blogSection .blogHeading {
      /* border: 1px solid orange; */
-     /* margin: 100px auto 50px auto; */
-     width: 1320px;
      height: 80px;
      padding-top: 80px;
      display: flex;
@@ -1888,8 +1886,6 @@
 
  .blogSection .blogHeading .text {
      /* border: 1px solid red; */
-     width: 645px;
-     height: 80px;
      gap: 8px;
      display: flex;
      flex-direction: column;
@@ -1897,8 +1893,6 @@
 
  .blogSection .blogHeading .text h1 {
      /* border: 1px solid green; */
-     width: 645px;
-     height: 48px;
      font-weight: 700;
      font-size: 40px;
      line-height: 48px;
@@ -1907,8 +1901,6 @@
 
  .blogSection .blogHeading .text p {
      /* border: 1px solid orange; */
-     width: 645px;
-     height: 24px;
      font-weight: 500;
      font-size: 16px;
      line-height: 24px;
@@ -1917,7 +1909,6 @@
  .blogSection .blogHeading .indicators {
      /* border: 1px solid red; */
      width: 92px;
-     /* border: 1px solid red; */
      height: 38px;
      gap: 16px;
      align-items: center;
@@ -1937,25 +1928,37 @@
  }
 
  .blogSection .blogContent .blogs {
-     /* border: 1px solid red; */
-     width: 1320px;
+     /* border: 2px solid red; */
+     /* width: 1320px; */
      height: 544px;
      display: flex;
-     padding-top: 48px;
      gap: 30px;
+     overflow: hidden;
+     margin: 0px auto;
+     scroll-behavior: smooth;
+     user-select: none;
      /* align-items: flex-start; */
  }
 
- .blogSection .container .blogs .blog:hover {
+ .blogSection .blogs .blog:hover {
      box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
      transform: scaleY(1.001);
  }
 
- .blogSection .container .blogs .blog:hover .textBlog h1 {
+ .blogSection .blogs .blog:hover .textBlog h1 {
      color: rgba(236, 145, 5, 1);
  }
-
- .blogSection .container .blogs .blog {
+ .blogSection .blogs .swiper-wrapper{
+    display: flex;
+    /* border: 1px solid red; */
+    width: 1320px;
+ }
+ .blogSection .blogs .swiper-wrapper .swiper-slide{
+    /* width: 100%; */
+    /* width:420px !important; */
+    /* flex-shrink: 0; */
+ }
+ .blogSection .blogs .blog {
      width: 420px;
      height: 450px;
      border-radius: 30px;
@@ -1965,29 +1968,30 @@
      flex-direction: column;
      background-color: rgba(255, 255, 255, 1);
      cursor: pointer;
+     overflow: hidden;
      transition: 0.4s ease-in-out;
      /* transition: 1s ease-in-out; */
  }
-
- .blogSection .container .blogs .blog img {
-     width: 388px;
+ .blogSection  .blogs .blog img {
+    width: 100%;
+     max-width: 388px;
      height: 200px;
      border-radius: 14px;
      /* border: 1px solid red; */
  }
 
- .blogSection .container .blogs .blog .textBlog {
+ .blogSection .blogs .blog .textBlog {
      /* border: 1px solid red; */
-     width: 388px;
-     height: 112px;
+     /* width: 388px;
+     height: 112px; */
      gap: 16px;
      display: flex;
      flex-direction: column;
  }
 
- .blogSection .container .blogs .blog .textBlog h1 {
-     width: 388px;
-     height: 48px;
+ .blogSection  .blogs .blog .textBlog h1 {
+     /* width: 388px;
+     height: 48px; */
      font-weight: 700;
      font-size: 20px;
      line-height: 24px;
@@ -1995,9 +1999,9 @@
      transition: 0.4s ease-in-out;
  }
 
- .blogSection .container .blogs .blog .textBlog p {
-     width: 388px;
-     height: 48px;
+ .blogSection .blogs .blog .textBlog p {
+     /* width: 388px;
+     height: 48px; */
      font-weight: 600;
      font-size: 16px;
      line-height: 24px;
@@ -2017,7 +2021,7 @@
      overflow: hidden;
  }
 
- .blogSection .container .blogs .blog button {
+ .blogSection .blogs .blog button {
      width: 115px;
      height: 46px;
      border-radius: 100px;
@@ -2034,7 +2038,7 @@
      margin: 40px 16px;
  }
 
- .blogSection .container button p {
+ .blogSection button p {
      width: 99px;
      /* border: 1px solid red; */
      height: 30px;
@@ -2044,7 +2048,7 @@
      color: rgba(236, 145, 5, 1);
  }
 
- .blogSection .container .allBlogButton {
+ .blogSection  .allBlogButton {
      width: 187px;
      height: 46px;
      border-radius: 100px;
@@ -2389,9 +2393,24 @@
          height: 100%;
      }
 
-     .destinations .container .images .right .right-2 {
+     /* .destinations .container .images .right .right-2 {
          aspect-ratio: 2/1;
+     } */
+     .blogSection .blogContent{
+        width: 100%;
+        /* border: 1px solid red; */
      }
+     .blogSection .blogContent .blogs{
+        width: 100%;
+        /* border: 1px solid red; */
+     }
+     /* .blogSection .container .blogs .blog img{
+        width: 100%;
+     } */
+
+     /* .blogSection .container .blogs .swiper-wrapper{
+        width: 1320px;
+     } */
  }
 
  /* this media query for the position nature images  */
@@ -2927,6 +2946,28 @@
         margin: 0px auto;
         padding-bottom: 40px;
      }
+     .blogSection .blogHeading{
+        flex-direction: column;
+        padding-top: 45px;
+        gap: 20px;
+        height: auto;
+     }
+     .blogSection .blogContent{
+        height: 100%;
+        gap: 7px;
+     }
+     .blogSection .blogHeading .text p{
+        font-size: 14px;
+        line-height: 13px;
+     }
+     .blogSection .blogHeading .text h1{
+        font-size: 24px;
+        line-height: 37px;
+     }
+     .blogSection  .blogs .swiper-wrapper{
+        height: auto;
+        padding-top: 20px;
+     }
  }
 
  /* sm -> styel for the small devices */
@@ -3081,35 +3122,11 @@
      .trendingDestinations .heading .headingText h1 {
          font-size: 32px;
      }
-
-     /* .adventureSection .advantureContent {
-         flex-direction: column;
-         height: auto;
-     }
-
-     .adventureSection .advantureContent .contentDiv {
-         border: 1px solid red;
-         width: 80%;
-         margin: 0px auto;
-     }
-
-     .adventureSection .advantureContent .advantureImgages .advanturePersonImage {
-         margin: 60px auto 0px;
-         width: 100%;
-         object-fit: cover;
-     }
-
-     .adventureSection .advantureContent .advantureImgages .advantureNatureImage {
-         width: 60%;
-         height: auto;
-     } */
      .tourPackages .container .heading .headingText h1 {
          font-size: 32px;
      }
 
      .destinations .destinationContent .images .card {
-         /* border: 1px solid red; */
-         /* width:400px; */
          height: 250px;
      }
 
@@ -3147,10 +3164,6 @@
 
  /* md -> style for the medium devices  */
  @media (min-width:768px) and (max-width:991px) {
-     /* header .navbar .drop-down{
-        display: block;
-    } */
-
      header .navbar .mobileMenu {
          position: fixed;
          width: 100px;
@@ -3222,45 +3235,11 @@
          padding-top: 121px;
          /* display: block; */
      }
-
-     /* .trendingDestinations .heading .headingBtns {
-                border: 1px solid red;
-                width: 92px;
-                border: 1px solid red;
-                height: 38px;
-                gap: 16px;
-                align-items: center;
-                justify-content: center;
-                display: flex;
-                position: relative;
-            } */
      .trendingDestinations .imageSlider {
          width: 90%;
          height: 300px;
          /* margin: 48px auto; */
      }
-
-     /* .adventureSection .advantureContent {
-         flex-direction: column;
-         height: auto;
-     }
-
-     .adventureSection .advantureContent .contentDiv {
-         border: 1px solid red;
-         width: 80%;
-         margin: 0px auto;
-     }
-
-     .adventureSection .advantureContent .advantureImgages .advanturePersonImage {
-         margin: 60px auto 0px;
-         width: 100%;
-         height: auto;
-     }
-
-     .adventureSection .advantureContent .advantureImgages .advantureNatureImage {
-         width: 60%;
-         height: auto;
-     } */
      .packages .packageCard .tourInfo .packageInclude .include p {
          font-size: 13px;
      }
