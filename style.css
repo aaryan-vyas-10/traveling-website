@@ -1,0 +1,3525 @@
+ * {
+     margin: 0;
+     padding: 0;
+     font-family: sans-serif;
+ }
+
+
+ body {
+     overflow-x: hidden;
+     /* box-sizing: border-box; */
+ }
+
+ /* this is the use for the remove the globally gray and blue color which come when click on anythign */
+ * {
+     -webkit-tap-highlight-color: transparent;
+ }
+
+ /* header Section */
+ header {
+     /* border: 1px solid green; */
+     width: 100%;
+     box-sizing: border-box;
+     z-index: 1;
+     position: absolute;
+     top: 24px;
+ }
+
+ .container {
+     max-width: 1320px;
+     width: 90%;
+     margin: 0px auto;
+     /* border: 2px solid red; */
+ }
+
+ header .navbar {
+     height: 80px;
+     /* border: 1px solid orange; */
+     margin: 0px auto;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ header .navbar .logo {
+     width: 138px;
+     height: 40px;
+     /* border: 1px solid red; */
+ }
+
+ header .navbar .menuIcon {
+     /* border: 1px solid red; */
+     width: 35px;
+     height: 35px;
+     background-color: #fff;
+     border-radius: 4px;
+     border: none;
+     display: none;
+ }
+
+ header .navbar .closeIcon {
+     display: none;
+ }
+
+ header .navbar .menus {
+     box-sizing: border-box;
+     display: flex;
+     align-items: center;
+     list-style: none;
+     gap: 30px;
+     /* border: 1px solid red; */
+ }
+
+ header .navbar .mobileMenu {
+     position: fixed;
+     width: 50px;
+     background-color: black;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     right: -300px;
+     top: 0px;
+     padding: 100px;
+     min-height: 120vh;
+     z-index: 2;
+     gap: 30px;
+     display: none;
+ }
+
+ header .navbar .mobileMenu .drop-down {
+     /* border: 1px solid red; */
+     flex-direction: column;
+     align-items: flex-start;
+ }
+
+ header .navbar .mobileMenu .auth {
+     flex-direction: column;
+ }
+
+ /* css for the mobileMenu */
+ header .navbar .mobileMenus {
+     flex-direction: column;
+     align-items: flex-start;
+     /* border: 1px solid green; */
+ }
+
+ /* css end for mobile Menu Here */
+ header .navbar .menus li a {
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: 600;
+     color: #fff;
+     line-height: 19px;
+ }
+
+ header .navbar .menus li a.active {
+     color: rgba(236, 145, 5, 1);
+ }
+
+ header .navbar .drop-down {
+     display: flex;
+     align-items: center;
+     gap: 30px;
+     color: #fff;
+     cursor: pointer;
+     /* border: 1px solid red; */
+ }
+
+ header .navbar .drop-down p {
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 24px;
+ }
+
+ header .navbar .drop-down .login-btn {
+     background-color: rgba(236, 145, 5, 1);
+     padding: 8px 16px 8px 16px;
+     border-radius: 100px;
+     cursor: pointer;
+     gap: 4px;
+ }
+
+ header .navbar .drop-down .language {
+     display: flex;
+     align-items: center;
+     gap: 2px;
+ }
+
+ header .navbar .drop-down .language p {
+     font-weight: 500;
+     line-height: 24px;
+     font-size: 16px;
+ }
+
+ header .navbar .drop-down .language .down-arrow {
+     width: 16px;
+     height: 16px;
+ }
+
+ header .navbar .drop-down .auth {
+     /* border: 1px solid red; */
+     display: flex;
+     align-items: center;
+     gap: 30px;
+     justify-content: center;
+ }
+
+ /* Hero Section */
+ .hero {
+     width: 100%;
+     height: 900px;
+     /* background-image : linear-gradient(direction,color1,color2) -> default follow the top / down colro apply */
+     background-image: linear-gradient(rgba(32, 35, 38, 0.5)), url('img/main.jpg');
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     position: relative;
+     box-sizing: border-box;
+     /* border: 1px solid red; */
+ }
+
+ .hero .heroText {
+     /* border: 1px solid red; */
+     color: #fff;
+     width: 1017px;
+     height: 204px;
+     gap: 24px;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     /* margin: 270px auto; */
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     box-sizing: border-box;
+ }
+
+ .hero .heroText p {
+     font-size: 20px;
+     line-height: 24px;
+     font-weight: 700;
+ }
+
+ .hero .heroText h1 {
+     font-weight: 700;
+     font-size: 70px;
+     line-height: 78px;
+ }
+
+ .hero .indicators {
+     /* border: 1px solid red; */
+     box-sizing: border-box;
+     width: 1632px;
+     /* width: 100%; */
+     height: 57.68px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .hero .indicators button {
+     width: 57.68px;
+     height: 57.68px;
+     border-radius: 150px;
+     border: 1.89px solid rgba(255, 255, 255, 1);
+     background-color: transparent;
+     cursor: pointer;
+ }
+
+ .hero .indicators button img {
+     width: 41.68px;
+     height: 41.68px;
+ }
+
+ /* keyframe hold the style which apply on the element at the certain time*/
+ /* in this here is the percentag are work as time for example : 0% start , 100% end */
+ /* find the time gap for use this 
+            Percentage  = (Seconds / Total Animation Time) × 100
+                0%      = (0 / 15) * 100
+                33.33%  = (5 / 15) * 100
+                66.66%  = (10 / 15) * 100
+                100%    = (15 / 15) * 100
+         */
+
+
+ /* @keyframes ImageChange {
+            0% {
+                background-image: linear-gradient(rgba(32, 35, 38, 0.5)), url('img/main.jpg');
+            }
+
+            33.33% {
+                background-image: linear-gradient(rgba(32, 35, 38, 0.5)), url('img/slider-2.jpg');
+            }
+
+            66.66% {
+                background-image: linear-gradient(rgba(32, 35, 38, 0.5)), url('img/slider-3.jpg');
+            }
+
+            100% {
+                background-image: linear-gradient(rgba(32, 35, 38, 0.5)), url('img/main.jpg');
+            }
+        } */
+
+ /* css for searchBar  */
+
+ .hero .searchBar {
+     /* border: 1px solid red; */
+     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+     box-sizing: border-box;
+     width: 824.02px;
+     height: 82px;
+     border-radius: 100px;
+     padding: 16px;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     background-color: rgba(255, 255, 255, 1);
+     position: absolute;
+     left: 50%;
+     bottom: 0;
+     /* z-index: 1; */
+     transform: translate(-50%, 50%);
+     /* transform: translate(-50%,-50%); */
+ }
+
+ .hero .searchBar .where,
+ .date,
+ .tour,
+ .searchBtn {
+     width: 224.34px;
+     height: 50px;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     cursor: pointer;
+ }
+
+ .hero .searchBar .searchBtn {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 119px;
+     height: 46px;
+     border-radius: 100px;
+     gap: 4px;
+     border-radius: 100px;
+     padding: 8px 16px 8px 16px;
+     color: #fff;
+     background-color: rgba(236, 145, 5, 1);
+     border: none
+ }
+
+ .hero .searchBar .searchBtn .searchIcon {
+     width: 22px;
+     height: 22px;
+ }
+
+ .hero .searchBar .searchBtn p {
+     font-size: 20px;
+     line-height: 30px;
+     font-weight: 400;
+ }
+
+ .hero .searchBar img {
+     width: 50px;
+     height: 50px;
+     border-radius: 50px;
+     /* border: 1px solid rgba(216, 224, 230, 1); */
+ }
+
+ .hero .searchBar p {
+     font-size: 16px;
+     line-height: 19px;
+     font-weight: 700;
+ }
+
+ .hero .searchBar span {
+     font-size: 14px;
+     line-height: 17px;
+     font-weight: 400;
+ }
+
+ /* css for the : trendingDestinations section */
+ .trendingDestinations {
+     /* border: 1px solid red; */
+     width: 100%;
+     height: 653px;
+     background-color: rgba(254, 245, 230, 1);
+     display: flex;
+     flex-direction: column;
+ }
+
+ .trendingDestinations .heading {
+     /* border: 1px solid orange; */
+     width: 1320px;
+     height: 104px;
+     display: flex;
+     align-items: flex-start;
+     justify-content: space-between;
+     padding-top: 121px;
+     margin: 0px auto;
+ }
+
+ .trendingDestinations .heading .headingText {
+     /* border: 1px solid red; */
+     width: 645px;
+     height: 104px;
+     gap: 8px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: center;
+ }
+
+ .trendingDestinations .heading .headingText h1 {
+     /* border: 1px solid red; */
+     font-size: 40px;
+     /* padding: 40px 0px; */
+     font-weight: 700;
+     line-height: 48px;
+     color: rgba(45, 44, 47, 1);
+ }
+
+ .trendingDestinations .heading .headingText p {
+     /* border: 1px solid red; */
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 24px;
+     letter-spacing: 0px;
+ }
+
+ .trendingDestinations .heading .headingBtns {
+     /* border: 1px solid red;  */
+     width: 92px;
+     height: 38px;
+     gap: 16px;
+     justify-content: center;
+     display: flex;
+ }
+
+ .trendingDestinations .heading .headingBtns button {
+     width: 92px;
+     height: 38px;
+     border-radius: 100px;
+     border: 1px solid rgba(32, 35, 38, 1);
+     padding: 8px;
+     display: flex;
+     background-color: transparent;
+     cursor: pointer;
+ }
+
+ .trendingDestinations .heading .headingBtns .headingBtn2 {
+     background-color: rgba(32, 35, 38, 1);
+ }
+
+ .trendingDestinations .imageSlider {
+     /* border: 1px solid green; */
+     width: 1320px;
+     height: 300px;
+     gap: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     padding-top: 48px;
+     margin: 0px auto;
+     overflow: hidden;
+     user-select: none;
+     scroll-behavior: smooth;
+ }
+
+ .trendingDestinations .imageSlider .swiper-wrapper {
+     display: flex;
+     /* border: 1px solid red; */
+
+ }
+
+ .trendingDestinations .imageSlider::-webkit-scrollbar {
+     display: none;
+ }
+
+ .trendingDestinations .imageSlider .place {
+     /* border: 1px solid red; */
+     width: 180px;
+     height: 300px;
+     gap: 16px;
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     /* border: 1px solid orange; */
+ }
+
+ /* .swiper-slide this add the fixed the width of the slide  */
+ .trendingDestinations .imageSlider .swiper-slide {
+     /* border: 1px solid red; */
+     width: 180px;
+ }
+
+ .trendingDestinations .imageSlider .place img {
+     /* border: 1px solid red; */
+     width: 180px;
+     height: 260px;
+     cursor: pointer;
+ }
+
+ .trendingDestinations .imageSlider .place p {
+     /* border: 1px solid red; */
+     font-weight: 700;
+     font-size: 20px;
+     line-height: 24px;
+ }
+
+
+ /* css for the adventureSection  */
+
+ .adventureSection {
+     width: 100%;
+     /* border: 1px solid red; */
+ }
+
+ .adventureSection .advantureContent {
+     height: 549px;
+     /* border: 1px solid green; */
+     margin: 80px auto;
+     display: flex;
+     /* justify-content: space-between; */
+     gap: 50px;
+     box-sizing: border-box;
+
+ }
+
+ .adventureSection .advantureContent .contentDiv {
+     width: 50%;
+     /* border: 10px solid green; */
+     /* border: 1px solid red; */
+ }
+
+ .adventureSection .advantureContent .adventureInformation .advantureSearch,
+ .advantureTour,
+ .advantureDate {
+     /* border: 1px solid green; */
+     display: flex;
+     /* align-items: center; */
+     /* width: 645px;
+     height: 92px; */
+     gap: 16px;
+     margin: 45px auto;
+     /* flex-direction: column; */
+ }
+
+ /* advanture heading  */
+ .adventureSection .adventureInformation .adventureHeading {
+     display: flex;
+     flex-direction: column;
+     align-content: center;
+     gap: 8px;
+     /* width: 645px;
+     height: 128px; */
+     /* border: 1px solid red; */
+ }
+
+ .adventureSection .adventureInformation .adventureHeading p {
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(94, 98, 130, 1);
+ }
+
+ .adventureSection .adventureInformation .adventureHeading h1 {
+     font-size: 40px;
+     font-weight: 700;
+     line-height: 48px;
+     color: rgba(45, 44, 47, 1);
+ }
+
+
+ .adventureSection .adventureInformation .advantureSearch .img {
+     width: 32px;
+     height: 32px;
+     padding: 20px;
+     border-radius: 72px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     /* background-color: transparent; */
+     background-color: rgba(255, 72, 127, 1);
+     gap: 10px;
+ }
+
+ .adventureSection .adventureInformation .advantureSearch .img2 {
+     background-color: rgba(99, 68, 254, 1);
+     /* border: 2px solid red; */
+ }
+
+ .adventureSection .adventureInformation .advantureSearch .img3 {
+     background-color: rgba(239, 203, 13, 1);
+     /* border: 2px solid red; */
+ }
+
+ .adventureSection .adventureInformation .advantureSearch img {
+     width: 32px;
+     height: 32px;
+     /* border: 2px solid red; */
+ }
+
+ .adventureSection .adventureInformation .advantureSearch .whereContent {
+     /* width: 555px;
+     height: 92px; */
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+     /* border: 2px solid aqua; */
+ }
+
+ .adventureSection .adventureInformation .advantureSearch .whereContent p {
+     font-weight: 700;
+     font-size: 20px;
+     line-height: 24px;
+     color: rgba(45, 44, 47, 1);
+ }
+
+ .adventureSection .adventureInformation .advantureSearch .whereContent span {
+     font-weight: 400;
+     font-size: 20px;
+     line-height: 30px;
+     color: rgba(70, 69, 73, 1);
+ }
+
+ /* advanture-rightside  */
+ .adventureSection .advantureContent .advantureImgages {
+     /* border: 2px solid red; */
+     /* width: 645px;
+     height: 549px; */
+     position: relative;
+ }
+
+ .adventureSection .advantureContent .advantureImgages .card {
+     position: absolute;
+     z-index: 2;
+     bottom: 25px;
+     left: 20px;
+     width: 140px;
+     height: 140px;
+     border-radius: 16px;
+     padding: 12px;
+     gap: 12px;
+     background-color: rgba(255, 255, 255, 1);
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     text-align: center;
+     /* border: 1px solid orange; */
+ }
+
+ .adventureSection .advantureContent .advantureImgages .card .cardIcon {
+     /* border: 1px solid red; */
+     width: 48px;
+     height: 48px;
+     border-radius: 100px;
+     padding: 12px;
+ }
+
+ .adventureSection .advantureContent .advantureImgages .card .cardDesription {
+     /* border: 1px solid red; */
+     width: 116px;
+     height: 55px;
+     gap: 4px;
+ }
+
+ .adventureSection .advantureContent .advantureImgages .card .cardDesription h1 {
+     font-family: 700;
+     font-size: 28px;
+     line-height: 34px;
+     color: rgba(32, 35, 38, 1);
+ }
+
+ .adventureSection .advantureContent .advantureImgages .card .cardDesription p {
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 17px;
+ }
+
+ .adventureSection .advantureContent .advantureImgages .advantureNatureImage {
+     position: absolute;
+     width: 345px;
+     height: 205px;
+     top: -20px;
+     z-index: 1;
+     /* border: 1px solid maroon; */
+ }
+
+ .adventureSection .advantureContent .advantureImgages .advanturePersonImage {
+     width: 645px;
+     height: 489px;
+     border-radius: 30px;
+     margin: 60px auto;
+     /* border: 2px solid magenta; */
+ }
+
+ /* css for the tour pacakges */
+ .tourPackages {
+     /* border: 1px solid red; */
+     width: 100%;
+     height: 830px;
+     background-color: rgba(254, 245, 230, 1);
+ }
+
+ .tourPackages .packages {
+     /* border: 1px solid red; */
+     width: 1320px;
+     height: 518px;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     padding: 3px;
+     gap: 30px;
+     overflow: hidden;
+     padding-top: 48px;
+     margin: 0px auto;
+     scroll-behavior: smooth;
+     user-select: none;
+ }
+
+ /* css for the swiper  */
+ .tourPackages .packages .swiper-wrapper {
+     /* border: 1px solid red; */
+     display: flex;
+ }
+
+ .tourPackages .container .heading {
+     /* border: 1px solid orange; */
+     width: 1320px;
+     height: 104px;
+     display: flex;
+     align-items: flex-start;
+     justify-content: space-between;
+     position: relative;
+     margin: 0px auto;
+     padding-top: 50px;
+ }
+
+ .tourPackages .container .heading .headingText {
+     /* border: 1px solid red; */
+     width: 645px;
+     height: 104px;
+     gap: 8px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: center;
+ }
+
+ .tourPackages .container .heading .headingText h1 {
+     /* border: 1px solid red; */
+     font-size: 40px;
+     /* padding: 40px 0px; */
+     font-weight: 700;
+     line-height: 48px;
+     color: rgba(45, 44, 47, 1);
+ }
+
+ .tourPackages .container .heading .headingText p {
+     /* border: 1px solid red; */
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 24px;
+     letter-spacing: 0px;
+ }
+
+ .tourPackages .container .heading .headingBtns {
+     /* border: 1px solid red; */
+     width: 92px;
+     height: 38px;
+     gap: 16px;
+     justify-content: center;
+     display: flex;
+ }
+
+ .tourPackages .container .heading .headingBtns button {
+     width: 92px;
+     height: 38px;
+     border-radius: 100px;
+     border: 1px solid rgba(32, 35, 38, 1);
+     padding: 8px;
+     display: flex;
+     background-color: transparent;
+     cursor: pointer;
+ }
+
+ .tourPackages .container .heading .headingBtns .headingBtn2 {
+     background-color: rgba(32, 35, 38, 1);
+ }
+
+ .tourPackages .packages::-webkit-scrollbar {
+     display: none;
+ }
+
+ .packages .packageCard {
+     /* border: 1px solid red; */
+     width: 420px;
+     height: 518px;
+     border-radius: 30px;
+     padding: 16px;
+     gap: 16px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     box-sizing: border-box;
+     position: relative;
+     background-color: rgba(255, 255, 255, 1);
+     transition: 0.3s;
+     cursor: pointer;
+ }
+
+ .packages .swiper-slide {
+     width: 100%;
+     max-width: 420px !important;
+     /* border: 2px solid red; */
+ }
+
+ .packages .packageCard:hover {
+     box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+     transform: scaleY(1.001);
+ }
+
+ .packages .packageCard:hover .tourPrice button {
+     background-color: rgba(236, 145, 5, 1);
+     /* background-image: url(img/right-white-hover.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; */
+ }
+
+
+ .packages .packageCard img {
+     width: 388px;
+     height: 295px;
+     border-radius: 14px;
+     gap: 10px;
+ }
+
+ .packages .packageCard .tourInfo {
+     /* border: 1px solid red; */
+     width: 388px;
+     height: 135px;
+     gap: 12px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .packages .packageCard .tourInfo .nameAndDays {
+     /* border: 1px solid red; */
+     width: 388px;
+     height: 50px;
+     gap: 4px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .packages .packageCard .tourInfo .nameAndDays .nameAndRating {
+     /* border: 1px solid green; */
+     width: 388px;
+     height: 29px;
+     gap: 8px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .packages .packageCard .tourInfo .nameAndDays .nameAndRating h1 {
+     font-weight: 700;
+     font-size: 24px;
+     line-height: 29px;
+     color: rgba(32, 35, 38, 1);
+     /* border: 1px solid; */
+ }
+
+ .packages .packageCard .tourInfo .nameAndDays .nameAndRating .rating {
+     width: 47px;
+     height: 24px;
+     gap: 4px;
+     /* border: 2px solid green; */
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .packages .packageCard .tourInfo .nameAndDays .nameAndRating .rating img {
+     width: 20px;
+     height: 20px;
+     /* border: 1px solid orange; */
+ }
+
+ .packages .packageCard .tourInfo .nameAndDays .nameAndRating .rating p {
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(70, 69, 73, 1);
+ }
+
+ .packages .packageCard .tourInfo .nameAndDays .days {
+     width: 388px;
+     height: 17px;
+     gap: 4px;
+     /* border: 2px solid green; */
+     display: flex;
+     align-items: center;
+     /* justify-content: flex-start; */
+ }
+
+ .packages .packageCard .tourInfo .nameAndDays .days .night {
+     /* border: 1px solid red; */
+     width: 53px;
+     height: 17px;
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 17px;
+     color: rgba(70, 69, 73, 1);
+ }
+
+ .packages .packageCard .tourInfo .nameAndDays .days .divider {
+     /* border: 1px solid red; */
+     /* width: 16px; */
+     color: rgba(70, 69, 73, 1);
+     /* border: 1px solid rgba(70, 69, 73, 1); */
+ }
+
+ .packages .packageCard .tourInfo .nameAndDays .days .day {
+     /* border: 1px solid red; */
+     width: 44px;
+     height: 17px;
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 17px;
+     color: rgba(70, 69, 73, 1);
+ }
+
+ .packages .packageCard .tourInfo hr {
+     color: rgba(216, 224, 230, 1);
+     border-radius: 10px;
+ }
+
+ .packages .packageCard .tourInfo .packageInclude {
+     /* border: 1px solid aqua; */
+     width: 388px;
+     height: 49.86px;
+     gap: 24px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-sizing: border-box;
+ }
+
+ .packages .packageCard .tourInfo .packageInclude .include {
+     /* border: 1px solid blue; */
+     width: 79px;
+     height: 49.86px;
+     gap: 8.86px;
+     text-align: center;
+     box-sizing: border-box;
+ }
+
+ .packages .packageCard .tourInfo .packageInclude .include {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .packages .packageCard .tourInfo .packageInclude .include .icon {
+     /* border: 1px solid purple; */
+     width: 79px;
+     height: 24px;
+     border-radius: 100px;
+     gap: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .packages .packageCard .tourInfo .packageInclude .include p {
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 17px;
+     color: rgba(70, 69, 73, 1);
+ }
+
+
+ .packages .packageCard .tourInfo .packageInclude .include .icon img {
+     width: 24px;
+     height: 24px;
+ }
+
+ .packages .packageCard .tourPrice {
+     /* border: 1px solid red; */
+     width: 388px;
+     height: 24px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     box-sizing: border-box;
+ }
+
+ .packages .packageCard .tourPrice .price {
+     /* border: 1px solid red; */
+     width: 138px;
+     height: 24px;
+     gap: 4px;
+     display: flex;
+     align-items: center;
+     box-sizing: border-box;
+ }
+
+ .packages .packageCard .tourPrice .price h2 {
+     width: 59px;
+     height: 19px;
+     font-weight: 700;
+     font-size: 16px;
+     line-height: 19px;
+     color: rgba(32, 35, 38, 1);
+     box-sizing: border-box;
+ }
+
+ .packages .packageCard .tourPrice .price .person {
+     /* border: 1px solid purple; */
+     width: 75px;
+     height: 17px;
+     box-sizing: border-box;
+     display: flex;
+ }
+
+ .packages .packageCard .tourPrice .price .person .slash {
+     width: 6px;
+     height: 17px;
+     box-sizing: border-box;
+ }
+
+ .packages .packageCard .tourPrice .price .person .slash .perPerosn {
+     width: 69px;
+     height: 17px;
+ }
+
+ .packages .packageCard .tourPrice .price .person p {
+     font-size: 400;
+     font-size: 14px;
+     line-height: 17px;
+     color: rgba(70, 69, 73, 1);
+ }
+
+ .packages .packageCard .tourPrice button {
+     width: 24px;
+     height: 24px;
+     border-radius: 100px;
+     padding: 4px;
+     gap: 4px;
+     background-color: transparent;
+     border: 1px solid rgba(92, 120, 140, 1);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-repeat: no-repeat;
+ }
+
+ .packages .packageCard .tourPrice button img {
+     width: 16px;
+     height: 16px;
+     cursor: pointer;
+ }
+
+ .packages .packageCard .likeIcon {
+     position: absolute;
+     top: 25px;
+     right: 25px;
+     width: 30px;
+     height: 30px;
+     border-radius: 100px;
+     box-sizing: border-box;
+     /* border: 1px solid black; */
+     padding: 6px;
+     gap: 4px;
+     cursor: pointer;
+     background-color: rgba(255, 255, 255, 1);
+ }
+
+ /* css for the destination */
+ .destinations {
+     /* border: 2px solid red; */
+     width: 100%;
+     background-color: white;
+ }
+
+ /* .destinations img{
+    width: 100%;
+    height: 100%;
+ } */
+ .destinations .destinationContent {
+     width: 1320px;
+     height: 890px;
+     margin: 80px auto;
+     /* border: 1px solid green; */
+ }
+
+ .destinations .container .heading {
+     /* border: 1px solid blue; */
+     /* width: 870px;
+     height: 104px; */
+     margin: 0px auto;
+ }
+
+ .destinations .container .heading .text {
+     /* border: 1px solid rgb(0, 128, 21); */
+     /* width: 870px;
+     height: 104px; */
+     gap: 8px;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     /* border: 3px solid red; */
+ }
+
+ .destinations .container .heading .text h1 {
+     /* width: 870px;
+     height: 48px; */
+     font-weight: 700;
+     font-size: 40px;
+     line-height: 48px;
+     color: rgba(45, 44, 47, 1);
+     /* border: 1px solid red; */
+ }
+
+ .destinations .container .heading .text p {
+     /* width: 870px;
+     height: 48px; */
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(70, 69, 73, 1);
+ }
+
+ .destinations .container .images {
+     /* border: 1px solid red; */
+     display: flex;
+     /* justify-content: space-between; */
+     align-items: center;
+     justify-content: center;
+     gap: 20px;
+     margin: 50px auto;
+     cursor: pointer;
+ }
+
+ .destinations .container .images .left {
+     /* border: 5px solid green; */
+     display: flex;
+ }
+
+ .destinations .container .images .left img {
+     width: 100%;
+     height: 100%;
+     /* border: 1px solid red; */
+ }
+
+ .destinations .container .images .right img {
+     width: 100%;
+     height: 100%;
+     /* aspect-ratio: 3/2; */
+     border-radius: 30px;
+     /* border: 1px solid red; */
+ }
+
+ .destinations .container .images .right .right-2 img {
+     aspect-ratio: 3/3;
+ }
+
+ .destinations .container .images .left .left-1 {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ .destinations .container .images .right {
+     /* border: 5px solid purple; */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ .destinations .container .images .right .right-2 {
+     /* border: 1px solid orange; */
+     display: flex;
+     justify-content: center;
+     /* align-items: center; */
+ }
+
+ .left,
+ .left-1,
+ .right,
+ .right-2 {
+     gap: 20px;
+ }
+
+ .destinations .destinationContent .images .card img {
+     object-fit: cover;
+     border-radius: 30px;
+ }
+
+ .destinations .images .left .left-1 .cardOne {
+     /* border: 2px solid red; */
+     /* width: 100%;
+     height: 100%; */
+     border-radius: 30px;
+     position: relative;
+
+ }
+
+ /* cardOne - Design*/
+ .destinations .images .left .left-1 .cardOne .text {
+     /* border: 2px solid purple; */
+     /* width: 259px;
+     height: 57px; */
+     position: absolute;
+     bottom: 20px;
+     gap: 8px;
+     display: flex;
+     flex-direction: column;
+     left: 24px;
+     box-sizing: border-box;
+ }
+
+ .destinations .images .left .left-1 .cardOne .text h3 {
+     color: rgba(255, 255, 255, 1);
+     /* width: 259px;
+     height: 24px; */
+     font-size: 700;
+     font-size: 20px;
+     line-height: 24px;
+ }
+
+ .destinations .images .left .left-1 .cardOne .text .rating {
+     display: flex;
+     width: 54px;
+     height: 25px;
+     border-radius: 100px;
+     padding: 4px 8px 4px 8px;
+     gap: 2px;
+     background-color: rgba(255, 255, 255, 1);
+     box-sizing: border-box;
+ }
+
+ .destinations .images .left .left-1 .cardOne .text .rating img {
+     width: 16px;
+     height: 16px;
+ }
+
+ .destinations .images .left .left-1 .cardOne .text .rating p {
+     /* width: 20px;
+     height: 17px; */
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 17px;
+     color: rgba(236, 145, 5, 1);
+ }
+
+ /* cardTow - Design */
+ .destinations .images .left .left-1 .cardTow {
+     /* border: 1px solid red; */
+     /* width: 100%;
+     height: 100%; */
+     border-radius: 30px;
+     position: relative;
+ }
+
+ .destinations .images .left .left-1 .cardTow .text {
+     /* border: 2px solid navy; */
+     position: absolute;
+     bottom: 20px;
+     left: 24px;
+     /* width: 259px;
+     height: 57px; */
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+
+ }
+
+ .destinations .images .left .left-1 .cardTow .text h3 {
+     /* width: 259px;
+     height: 24px; */
+     font-size: 700;
+     font-size: 20px;
+     line-height: 24px;
+     color: rgba(255, 255, 255, 1);
+ }
+
+ .destinations .images .left .left-1 .cardTow .text .rating {
+     width: 54px;
+     height: 25px;
+     border-radius: 100px;
+     padding: 4px 8px 4px 8px;
+     gap: 2px;
+     background-color: rgba(255, 255, 255, 1);
+     display: flex;
+     align-items: center;
+     box-sizing: border-box;
+ }
+
+ .destinations .images .left .left-1 .cardTow .text .rating img {
+     width: 16px;
+     height: 16px;
+ }
+
+ .destinations .images .left .left-1 .cardTow .text .rating p {
+     /* width: 20px;
+     height: 17px; */
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 17px;
+     color: rgba(236, 145, 5, 1);
+ }
+
+ /* cardThree - Design */
+ .destinations .images .left .left-2 .cardThree {
+     /* width: 100%;
+     height: 100%; */
+     border-radius: 30px;
+     /* border: 2px solid navy; */
+     position: relative;
+ }
+
+ .destinations .images .left .left-2 .cardThree .text {
+     /* border: 1px solid red; */
+     /* width: 372px;
+     height: 57px; */
+     left: 24px;
+     gap: 8px;
+     display: flex;
+     flex-direction: column;
+     position: absolute;
+     bottom: 20px;
+ }
+
+ .destinations .images .left .left-2 .cardThree .text h3 {
+     font-weight: 700;
+     font-size: 20px;
+     line-height: 24px;
+     color: rgba(255, 255, 255, 1);
+ }
+
+ .destinations .images .left .left-2 .cardThree .text .rating {
+     width: 54px;
+     height: 25px;
+     border-radius: 100px;
+     padding: 4px 8px 4px 8px;
+     gap: 2px;
+     background-color: rgba(255, 255, 255, 1);
+     display: flex;
+     align-items: center;
+     box-sizing: border-box;
+ }
+
+ .destinations .images .left .left-2 .cardThree .text .rating img {
+     width: 16px;
+     height: 16px;
+ }
+
+ .destinations .images .left .left-2 .cardThree .text .rating p {
+     /* width: 20px;
+     height: 17px; */
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 17px;
+     color: rgba(236, 145, 5, 1);
+ }
+
+ /* cardFour - Design */
+
+ .destinations .images .right .right-1 .cardFour {
+     /* border: 2px solid orange; */
+     /* width: 100%;
+     height: 100%; */
+     border-radius: 30px;
+     position: relative;
+ }
+
+ .destinations .images .right .right-1 .cardFour .text {
+     /* border: 1px solid navy; */
+     /* width: 485px;
+     height: 57px; */
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+     position: absolute;
+     left: 24px;
+     bottom: 20px;
+ }
+
+ .destinations .images .right .right-1 .cardFour .text h3 {
+     /* width: 485px;
+     height: 24px; */
+     font-weight: 700;
+     font-size: 20px;
+     line-height: 24px;
+     color: rgba(255, 255, 255, 1);
+ }
+
+ .destinations .images .right .right-1 .cardFour .text .rating {
+     width: 54px;
+     height: 25px;
+     border-radius: 100px;
+     padding: 4px 8px 4px 8px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 2px;
+     background-color: rgba(255, 255, 255, 1);
+     box-sizing: border-box;
+ }
+
+ .destinations .images .right .right-1 .cardFour .text .rating img {
+     width: 16px;
+     height: 16px;
+ }
+
+ .destinations .images .right .right-1 .cardFour .text .rating p {
+     /* width: 20px;
+     height: 17px; */
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 17px;
+     color: rgba(236, 145, 5, 1);
+ }
+
+ /* card Five - Design */
+
+ .destinations .images .right .right-2 .cardFive {
+     /* border: 2px solid blue; */
+     /* width: 100%;
+     height: 100%; */
+     border-radius: 30px;
+     position: relative;
+ }
+
+ .destinations .images .right .right-2 .cardFive .text {
+     /* border: 1px solid red; */
+     /* width: 178px;
+     height: 57px; */
+     gap: 8px;
+     display: flex;
+     flex-direction: column;
+     left: 24px;
+     bottom: 20px;
+     position: absolute;
+ }
+
+ .destinations .images .right .right-2 .cardFive .text h3 {
+     /* width: 178px;
+     height: 24px; */
+     font-weight: 600;
+     font-size: 20px;
+     line-height: 24px;
+     color: rgba(255, 255, 255, 1);
+ }
+
+ .destinations .images .right .right-2 .cardFive .text .rating {
+     width: 54px;
+     height: 25px;
+     border-radius: 100px;
+     padding: 4px 8px 4px 8px;
+     display: flex;
+     align-items: center;
+     box-sizing: border-box;
+     gap: 2px;
+     background-color: rgba(255, 255, 255, 1);
+ }
+
+ .destinations .images .right .right-2 .cardFive .text .rating img {
+     width: 16px;
+     height: 16px;
+ }
+
+ .destinations .images .right .right-2 .cardFive .text .rating p {
+     /* width: 20px;
+     height: 17px; */
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 17px;
+     color: rgba(236, 145, 5, 1);
+ }
+
+ /* card Six - design */
+ .destinations .images .right .right-2 .cardCustom {
+     /* width: 100%;
+     height: 100%; */
+     border-radius: 30px;
+ }
+
+ .destinations .container button {
+     display: flex;
+     align-items: center;
+     width: 193px;
+     height: 46px;
+     justify-content: center;
+     margin: 0px auto;
+     border-radius: 100px;
+     padding: 8px 16px 8px 16px;
+     gap: 8px;
+     background-color: rgba(236, 145, 5, 1);
+     font-weight: 400;
+     font-size: 20px;
+     line-height: 30px;
+     color: rgba(255, 255, 255, 1);
+     border: none;
+     cursor: pointer;
+ }
+
+ .destinations .container button img {
+     width: 12.3px;
+     height: 12.3px;
+ }
+
+ /* css for the testimonilas */
+ .testimonial {
+     /* border: 1px solid red; */
+     width: 100%;
+     height: 360px;
+     margin: 100px auto;
+     display: flex;
+ }
+
+ .testimonial .testimonialContent {
+     height: 360px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     /* border: 1px solid red; */
+     gap: 20px;
+ }
+
+ .testimonial .leftContent {
+     width: 50%;
+     height: 100%;
+     /* border: 1px solid green; */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 40px;
+     box-sizing: border-box;
+ }
+
+ .testimonial .leftContent .testimonialHeading {
+     /* border: 1px solid red; */
+     /* width: 645px;
+     height: 192px; */
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+ }
+
+ .testimonial .leftContent .testimonialHeading .text {
+     /* border: 1px solid blue; */
+     /* width: 643px;
+     height: 192px; */
+     gap: 48px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .testimonial .leftContent .testimonialHeading .text h1 {
+     /* width: 643px;
+     height: 96px; */
+     font-weight: 700;
+     font-size: 40px;
+     line-height: 48px;
+     color: rgba(45, 44, 47, 1);
+ }
+
+ .testimonial .leftContent .testimonialHeading .text p {
+     /* width: 643px;
+     height: 48px; */
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(70, 69, 73, 1);
+ }
+
+ .testimonial .leftContent .happyCustomers {
+     /* border: 1px solid red; */
+     /* width: 163px;
+     height: 98px; */
+     border-radius: 12px;
+     padding: 16px;
+     gap: 8px;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     box-sizing: border-box;
+     background-color: rgba(242, 245, 247, 1);
+     border: 1px solid rgba(216, 224, 230, 1);
+     cursor: pointer;
+ }
+
+ .testimonial .leftContent .happyCustomers h1 {
+     /* width: 131px;
+     height: 34px; */
+     font-weight: 700;
+     font-size: 28px;
+     line-height: 34px;
+     color: rgba(45, 44, 47, 1);
+ }
+
+ .testimonial .leftContent .happyCustomers p {
+     /* width: 131px;
+     height: 24px; */
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(70, 69, 73, 1);
+ }
+
+ .testimonial .leftContent .rating {
+     /* border: 1px solid red; */
+     /* width: 139px;
+     height: 98px; */
+     border-radius: 12px;
+     padding: 16px;
+     gap: 8px;
+     display: flex;
+     /* align-items: center; */
+     flex-direction: column;
+     box-sizing: border-box;
+     background-color: rgba(242, 245, 247, 1);
+     border: 1px solid rgba(216, 224, 230, 1);
+     cursor: pointer;
+ }
+
+ .testimonial .leftContent .rating .frame {
+     /* border: 1px solid red; */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 67px;
+     height: 34px;
+     gap: 4px;
+ }
+
+ .testimonial .leftContent .rating .frame h1 {
+     /* width: 39px;
+     height: 34px; */
+     font-weight: 700;
+     font-size: 28px;
+     line-height: 34px;
+     color: rgba(45, 44, 47, 1);
+ }
+
+ .testimonial .leftContent .rating .frame img {
+     width: 20px;
+     height: 20px;
+ }
+
+ .testimonial .leftContent .rating p {
+     /* width: 107px;
+     height: 24px; */
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(70, 69, 73, 1);
+ }
+
+ .testimonial .leftContent .customersAndRating {
+     /* border: 1px solid red; */
+     display: flex;
+     gap: 40px;
+ }
+
+ .testimonial .customerMessages {
+     /* border: 1px solid blue; */
+     width: 50%;
+ }
+
+ .testimonial .customerMessages .message {
+     /* border: 1px solid green; */
+     width: 100%;
+     height: 360px;
+     border-radius: 30px;
+     padding: 40px;
+     gap: 10px;
+     box-sizing: border-box;
+     display: flex;
+     background-color: rgba(254, 245, 230, 1);
+     display: none;
+     opacity: 0;
+     transition: opacity 0.5s ease-in-out;
+     z-index: 1;
+ }
+
+ .testimonial .customerMessages .message.active {
+     display: block;
+     opacity: 1;
+ }
+
+ .testimonial .customerMessages .message .review {
+     /* border: 1px solid red; */
+     width: 100%;
+     /* width: 565px;
+     height: 280px; */
+     display: flex;
+     justify-content: space-between;
+     flex-direction: column;
+     gap: 32px;
+ }
+
+ .testimonial .customerMessages .message .review .userAndMessages {
+     /* border: 1px solid navy; */
+     /* width: 565px;
+     height: 224px; */
+     gap: 32px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .testimonial .customerMessages .message .review .userAndMessages .userAndRate {
+     /* border: 1px solid orange; */
+     /* width: 565px;
+     height: 72px; */
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user {
+     /* border: 1px solid aqua; */
+     /* width: 511px;
+     height: 72px; */
+     gap: 5px;
+     display: flex;
+     align-items: center;
+     justify-content:space-between;
+     box-sizing: border-box;
+     width: 100%;
+ }
+
+ .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user .userPhotoName img {
+     width: 72px;
+     height: 72px;
+ }
+
+ .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user .userPhotoName {
+     /* border: 1px solid red; */
+     /* width: 423px;
+     height: 43px; */
+     gap: 16px;
+     display: flex;
+     align-items: center;
+     width: 100%;
+     /* flex-direction: column; */
+ }
+
+ .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user .name h1 {
+     /* width: 423px;
+     height: 24px; */
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(45, 44, 47, 1);
+ }
+
+ .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user .name p {
+     /* width: 423px;
+     height: 17px; */
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 17px;
+     color: rgba(70, 69, 73, 1);
+ }
+
+ .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user .rate {
+     /* width: 54px;
+     height: 25px; */
+     border-radius: 100px;
+     padding: 4px 8px 4px 8px;
+     gap: 2px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: rgba(236, 145, 5, 1);
+     box-sizing: border-box;
+ }
+
+ .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user .rate img {
+     width: 16px;
+     height: 16px;
+ }
+
+ .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user .rate p {
+     /* width: 20px;
+     height: 17px; */
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 17px;
+     color: rgba(255, 255, 255, 1);
+ }
+
+ .testimonial .customerMessages .message .review .userAndMessages .userMessage {
+     /* border: 1px solid red; */
+     /* width: 565px;
+     height: 120px; */
+ }
+
+ .testimonial .customerMessages .message .review .userAndMessages .userMessage p {
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(70, 69, 73, 1);
+ }
+
+ .testimonial .customerMessages .message .review .indicaters {
+     width: 1005;
+     height: 24px;
+     gap: 8px;
+     /* border: 2px solid orange; */
+     box-sizing: border-box;
+     display: flex;
+     align-items: center;
+ }
+
+ .testimonial .customerMessages .message .review .indicaters .count {
+     /* width: 19px;
+     height: 24px; */
+     gap: 10px;
+     display: flex;
+ }
+
+ .testimonial .customerMessages .message .review .indicaters .count p {
+     /* width: 19px;
+     height: 24px; */
+     font-weight: 600;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(0, 0, 0, 1);
+ }
+
+ .testimonial .customerMessages .message .review .indicaters .stepper {
+     /* border: 1px solid navy; */
+     /* width: 511px;
+     height: 4px; */
+     display: flex;
+     align-items: center;
+     width: 100%;
+ }
+
+ .testimonial .customerMessages .message .review .indicaters .activeStepper {
+     width: 170.33px;
+     height: 4px;
+     border-radius: 100px;
+     background-color: rgba(236, 145, 5, 1);
+ }
+
+ .testimonial .customerMessages .message .review .indicaters .mainStepper {
+     width: 100%;
+     height: 4px;
+     border-radius: 100px;
+     opacity: 16%;
+     background-color: rgba(32, 35, 38, 1);
+ }
+
+ .testimonial .customerMessages .message .review .indicaters .current {
+     width: 100%;
+     height: 4px;
+     border-radius: 100px;
+     background-color: rgba(236, 145, 5, 1);
+ }
+
+ .testimonial .customerMessages .message .review .indicaters .current1 {
+     width: 100%;
+     height: 4px;
+     border-radius: 100px;
+     background-color: rgba(236, 145, 5, 1);
+ }
+
+ .testimonial .customerMessages .message .review .indicaters .currentMain1 {
+     width: 0px;
+     height: 4px;
+     border-radius: 100px;
+     opacity: 16%;
+     background-color: rgba(32, 35, 38, 1);
+ }
+
+ .testimonial .customerMessages .message .review .indicaters .currenMain {
+     width: 100%;
+     height: 4px;
+     border-radius: 100px;
+     opacity: 16%;
+     background-color: rgba(32, 35, 38, 1);
+ }
+
+ .blogSection {
+     width: 100%;
+     height: 832px;
+     background-color: rgba(254, 245, 230, 1);
+     /* border: 1px solid red; */
+     /* padding: 1px; */
+ }
+
+ .blogSection .blogContent {
+     width: 1320px;
+     /* border: 1px solid green; */
+     height: 832px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .blogSection .blogHeading {
+     /* border: 1px solid orange; */
+     /* margin: 100px auto 50px auto; */
+     width: 1320px;
+     height: 80px;
+     padding-top: 80px;
+     display: flex;
+     align-items: flex-start;
+     justify-content: space-between;
+ }
+
+ .blogSection .blogHeading .text {
+     /* border: 1px solid red; */
+     width: 645px;
+     height: 80px;
+     gap: 8px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .blogSection .blogHeading .text h1 {
+     /* border: 1px solid green; */
+     width: 645px;
+     height: 48px;
+     font-weight: 700;
+     font-size: 40px;
+     line-height: 48px;
+     color: rgba(45, 44, 47, 1);
+ }
+
+ .blogSection .blogHeading .text p {
+     /* border: 1px solid orange; */
+     width: 645px;
+     height: 24px;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+ }
+
+ .blogSection .blogHeading .indicators {
+     /* border: 1px solid red; */
+     width: 92px;
+     /* border: 1px solid red; */
+     height: 38px;
+     gap: 16px;
+     align-items: center;
+     justify-content: center;
+     display: flex;
+ }
+
+ .blogSection .blogHeading .indicators button {
+     width: 92px;
+     height: 38px;
+     border-radius: 100px;
+     border: 1px solid rgba(32, 35, 38, 1);
+     padding: 8px;
+     display: flex;
+     background-color: transparent;
+     cursor: pointer;
+ }
+
+ .blogSection .blogContent .blogs {
+     /* border: 1px solid red; */
+     width: 1320px;
+     height: 544px;
+     display: flex;
+     padding-top: 48px;
+     gap: 30px;
+     /* align-items: flex-start; */
+ }
+
+ .blogSection .container .blogs .blog:hover {
+     box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+     transform: scaleY(1.001);
+ }
+
+ .blogSection .container .blogs .blog:hover .textBlog h1 {
+     color: rgba(236, 145, 5, 1);
+ }
+
+ .blogSection .container .blogs .blog {
+     width: 420px;
+     height: 450px;
+     border-radius: 30px;
+     padding: 16px;
+     gap: 16px;
+     display: flex;
+     flex-direction: column;
+     background-color: rgba(255, 255, 255, 1);
+     cursor: pointer;
+     transition: 0.4s ease-in-out;
+     /* transition: 1s ease-in-out; */
+ }
+
+ .blogSection .container .blogs .blog img {
+     width: 388px;
+     height: 200px;
+     border-radius: 14px;
+     /* border: 1px solid red; */
+ }
+
+ .blogSection .container .blogs .blog .textBlog {
+     /* border: 1px solid red; */
+     width: 388px;
+     height: 112px;
+     gap: 16px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .blogSection .container .blogs .blog .textBlog h1 {
+     width: 388px;
+     height: 48px;
+     font-weight: 700;
+     font-size: 20px;
+     line-height: 24px;
+     color: rgba(45, 44, 47, 1);
+     transition: 0.4s ease-in-out;
+ }
+
+ .blogSection .container .blogs .blog .textBlog p {
+     width: 388px;
+     height: 48px;
+     font-weight: 600;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(70, 69, 73, 1);
+
+     /* this is the use for the single line  */
+     /* white-space:nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis; */
+
+     /* display:-webkit-box : this active the box model for like flexbox */
+     display: -webkit-box;
+     /* -webkit-box-orient : vertical it set the line postion top to bottom */
+     -webkit-box-orient: vertical;
+     /* -webkit-line-clamp : 2 this say show only the two line , and in this show the ...  dor for the show next text */
+     -webkit-line-clamp: 2;
+     overflow: hidden;
+ }
+
+ .blogSection .container .blogs .blog button {
+     width: 115px;
+     height: 46px;
+     border-radius: 100px;
+     padding: 8px 16px 8px 4px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 4px;
+     border: none;
+     background: transparent;
+     cursor: pointer;
+     box-sizing: border-box;
+     margin: 40px 16px;
+ }
+
+ .blogSection .container button p {
+     width: 99px;
+     /* border: 1px solid red; */
+     height: 30px;
+     font-weight: 400;
+     font-size: 20px;
+     line-height: 30px;
+     color: rgba(236, 145, 5, 1);
+ }
+
+ .blogSection .container .allBlogButton {
+     width: 187px;
+     height: 46px;
+     border-radius: 100px;
+     background-color: rgba(236, 145, 5, 1);
+     padding: 8px 16px 8px 16px;
+     gap: 8px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-sizing: border-box;
+     border: none;
+     font-weight: 400;
+     font-size: 20px;
+     line-height: 30px;
+     color: rgba(255, 255, 255, 1);
+     cursor: pointer;
+     margin: 0px auto;
+ }
+
+ /* css for the footer section */
+ .footer {
+     /* border: 1px solid red; */
+     width: 100%;
+     height: 400px;
+     background-color: rgba(32, 35, 38, 1);
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
+
+ .footer .footerContent {
+     /* border: 1px solid green; */
+     max-width: 1320px;
+     width: 100%;
+     margin: 48px auto;
+     display: flex;
+     justify-content: space-between;
+     box-sizing: border-box;
+ }
+
+ .footer .footerContent .footerLogo {
+     /* border: 1px solid orange; */
+     width: 420px;
+     height: 168px;
+     gap: 32px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+ }
+
+ .footer .footerContent .footerLogo .logo {
+     width: 138px;
+     height: 40px;
+ }
+
+ .footer .footerContent .footerLogo p {
+     width: 420px;
+     height: 96px;
+     opacity: 76%;
+     color: rgba(255, 255, 255, 1);
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+ }
+
+ .footer .footerContent .footerLogo .socialIcons {
+     /* border: 1px solid red; */
+     width: 296px;
+     height: 40px;
+     gap: 24px;
+     display: flex;
+     align-items: center;
+ }
+
+ .footer .footerContent .footerLogo .socialIcons button {
+     width: 40px;
+     height: 40px;
+     border-radius: 8px;
+     padding: 8px;
+     gap: 4px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: rgba(255, 255, 255, 0.12);
+     border: none;
+     cursor: pointer;
+ }
+
+ .footer .footerContent .footerLinks {
+     /* border: 1px solid red; */
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     /* justify-content: center; */
+     width: 195px;
+     height: 200px;
+     gap: 32px;
+ }
+
+ .footer .footerContent .footerLinks h4 {
+     /* border: 1px solid red; */
+     width: 195px;
+     height: 24px;
+     font-size: 20px;
+     font-weight: 700;
+     line-height: 24px;
+     color: rgba(255, 255, 255, 1);
+ }
+
+ .footer .footerContent .footerLinks ul {
+     list-style: none;
+     width: 195px;
+     height: 14px;
+     gap: 16px;
+     display: flex;
+     flex-direction: column;
+     /* align-items: center; */
+ }
+
+ .footer .footerContent .footerLinks ul li a {
+     opacity: 76%;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(255, 255, 255, 1);
+     text-decoration: none;
+     /* border: 1px solid red; */
+ }
+
+ .footer .footerContent .newsletter {
+     /* border: 1px solid red; */
+     width: 420px;
+     height: 168px;
+     gap: 32px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .footer .footerContent .newsletter h4 {
+     width: 420px;
+     height: 24px;
+     font-weight: 700;
+     font-size: 20px;
+     line-height: 24px;
+     color: rgba(255, 255, 255, 1);
+ }
+
+ .footer .footerContent .newsletter .form {
+     width: 420px;
+     height: 112px;
+     gap: 16px;
+     display: flex;
+     flex-direction: column;
+
+ }
+
+ .footer .footerContent .newsletter .form p {
+     width: 420px;
+     height: 48px;
+     opacity: 76%;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(255, 255, 255, 1);
+ }
+
+ .footer .footerContent .newsletter form {
+     /* border: 2px solid red; */
+     width: 420px;
+     height: 48px;
+     gap: 16px;
+     display: flex;
+     align-items: center;
+     border: 1px solid rgba(255, 255, 255, 1);
+     border-radius: 4px;
+ }
+
+ .footer .footerContent .newsletter form input {
+     width: 420px;
+     height: 48px;
+
+     border: none;
+     outline: none;
+     padding: 8px 16px 8px 16px;
+     gap: 16px;
+     box-sizing: border-box;
+     background-color: rgba(32, 35, 38, 1);
+     color: rgba(242, 245, 247, 1);
+ }
+
+ .footer .footerContent .newsletter form input::placeholder {
+     width: 388px;
+     height: 24px;
+     opacity: 76%;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(255, 255, 255, 1);
+     box-sizing: border-box;
+ }
+
+ .footer .footerContent .newsletter form button {
+     width: 38px;
+     height: 38px;
+     border-radius: 4px;
+     padding: 8px;
+     gap: 4px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: rgba(236, 145, 5, 1);
+     border: none;
+     cursor: pointer;
+     box-sizing: border-box;
+     margin: 5px;
+ }
+
+ .footer .footerBottom {
+     /* border: 1px solid red; */
+     width: 100%;
+     box-sizing: border-box;
+     height: 48px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     border-top: 1px solid rgba(58, 76, 89, 1);
+ }
+
+ .footer .footerBottom .footerBottomContent {
+     /* border: 1px solid red; */
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .footer .footerBottom .footerBottomContent span {
+     /* border: 1px solid orange; */
+     width: 333px;
+     height: 24px;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(255, 255, 255, 1);
+ }
+
+ .footer .footerBottom .footerBottomContent .footerBottomLinks {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 238px;
+     height: 24px;
+     gap: 12px;
+ }
+
+ .footer .footerBottom .footerBottomContent .footerBottomLinks a {
+     text-decoration: none;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     color: rgba(255, 255, 255, 1);
+     opacity: 76%;
+ }
+
+ @media(max-width:1685px) {
+     .hero .indicators {
+         max-width: 1362px;
+     }
+ }
+
+ @media(max-width:1450px) {
+     .tourPackages {
+         height: 800px;
+     }
+
+     .tourPackages .container .heading {
+         width: 100%;
+     }
+
+     .tourPackages .packages {
+         width: 100%;
+         padding-top: 80px;
+     }
+
+     /* .packages .packageCard{
+        height: auto;
+    } */
+     .packages .packageCard img {
+         width: 100%;
+         height: 100%;
+     }
+
+     .tourPackages .container .heading {
+         padding-bottom: 10px;
+     }
+
+     .packages .packageCard .tourInfo {
+         width: 100%;
+         height: auto;
+     }
+
+     .packages .packageCard .tourInfo .nameAndDays {
+         width: 100%;
+     }
+
+     .packages .packageCard .tourInfo .nameAndDays .nameAndRating {
+         width: 100%;
+         justify-content: space-between;
+     }
+
+     .packages .packageCard .tourInfo .nameAndDays .days {
+         width: 100%;
+     }
+
+     .packages .packageCard .tourInfo .packageInclude {
+         width: 100%;
+         gap: 10px;
+     }
+
+     .packages .packageCard .tourInfo .packageInclude .include {
+         width: 100%;
+     }
+
+     .packages .packageCard .tourInfo .packageInclude .include .icon {
+         width: 100%;
+     }
+
+     .packages .packageCard .tourPrice {
+         width: 100%;
+     }
+
+     .packages .packageCard .tourPrice .price {
+         width: 100%;
+     }
+
+     .destinations {
+         width: 100%;
+     }
+
+     .destinations .destinationContent {
+         width: 100%;
+         height: 100%;
+     }
+
+     .destinations .container .images .right .right-2 {
+         aspect-ratio: 2/1;
+     }
+ }
+
+ /* this media query for the position nature images  */
+ @media(max-width:1200px) {
+     .adventureSection .advantureContent {
+         flex-direction: column;
+         height: auto;
+     }
+
+     .adventureSection .advantureContent .contentDiv {
+         /* border: 1px solid red; */
+         width: 95%;
+         margin: 0px auto;
+     }
+
+     .adventureSection .advantureContent .advantureImgages .advanturePersonImage {
+         margin: 60px auto 0px;
+         width: 100%;
+         height: auto;
+         object-fit: cover;
+     }
+
+     .adventureSection .advantureContent .advantureImgages .card {
+         /* border: 1px solid red; */
+         bottom: 25px;
+     }
+
+     .adventureSection .advantureContent .advantureImgages .advantureNatureImage {
+         width: 50%;
+         height: auto;
+         top: 10px;
+     }
+
+     .destinations .container .images {
+         flex-direction: column;
+     }
+
+     .destinations .container .images .left {
+         justify-content: center;
+     }
+
+     .destinations .container .images .left .left-1 {
+         flex-direction: row;
+     }
+
+     .destinations .container .images .right {
+         flex-direction: row;
+     }
+
+     .destinations .destinationContent .images .card {
+         /* border: 1px solid red; */
+         width: 300px;
+         height: 300px;
+     }
+ }
+
+
+ /* css media - query for all break points */
+
+ /* xs -> style for the extra small devices */
+ @media (min-width:320px) and (max-width:575px) {
+     header .navbar .hideUl {
+         display: none;
+     }
+
+     header .navbar .mobileMenu {
+         position: fixed;
+         width: 100px;
+         background-color: black;
+         min-height: 100vh;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         right: -300px;
+         top: 0px;
+         padding: 100px;
+         min-height: 120vh;
+         z-index: 2;
+         gap: 30px;
+         justify-content: flex-start;
+         transition: 0.3s;
+         /* display:block; */
+     }
+
+     header .navbar .menuIcon {
+         display: block;
+     }
+
+     header .navbar .drop-down .language {
+         display: none;
+     }
+
+     header .navbar .drop-down {
+         /* border: 1px solid red; */
+         display: flex;
+         align-items: center;
+         justify-content: end;
+         width: 100%;
+     }
+
+     header .navbar .drop-down .mobileLanguages {
+         display: block;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 10px;
+     }
+
+     header .navbar .drop-down .auth {
+         display: none;
+     }
+
+     header .navbar .drop-down .mobileAuth {
+         display: flex;
+         align-items: flex-start;
+     }
+
+     header .navbar .mobileMenu .menus ul {
+         list-style: none;
+         width: 100%;
+         height: auto;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+     }
+
+     header .navbar .mobileMenu .menus ul li a {
+         text-decoration: none;
+         font-weight: 500;
+         font-size: 16px;
+         line-height: 24px;
+         color: rgba(255, 255, 255, 1);
+     }
+
+     header .navbar .mobileMenu .menus ul li {
+         width: 100%;
+         height: auto;
+     }
+
+     header .navbar .mobileMenu .menus ul li:hover {
+         background-color: rgba(236, 145, 5, 1);
+     }
+
+     header .navbar .mobileMenu .menus .closeIcon1 {
+         display: block;
+         position: absolute;
+         top: 40px;
+         right: 40px;
+         width: 30px;
+         height: 30px;
+         background-color: #fff;
+         border-radius: 5px;
+         cursor: pointer;
+     }
+
+     .hero .heroText p {
+         font-size: 14px;
+     }
+
+     .hero .heroText {
+         width: 70%;
+         height: 194px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-evenly;
+     }
+
+     .hero .heroText h1 {
+         font-size: 30px;
+         line-height: 35px;
+     }
+
+     .hero .indicators {
+         width: 90%;
+         height: auto;
+     }
+
+     .hero .indicators button img {
+         width: 32.68px;
+         height: 33.68px;
+     }
+
+     .hero .indicators button {
+         width: 38.68px;
+         height: 38.68px;
+         border-radius: 150px;
+         border: 1.89px solid rgba(255, 255, 255, 1);
+         background-color: transparent;
+         cursor: pointer;
+     }
+
+     .hero .heroText p {
+         font-size: 14px;
+         line-height: 16px;
+         font-weight: 700;
+     }
+
+     .hero .searchBar {
+         width: 90%;
+         display: flex;
+         align-content: flex-start;
+         flex-wrap: wrap;
+         overflow-y: hidden;
+         overflow-x: auto;
+         flex-direction: column;
+         border-radius: 16px;
+         /* overflow: auto; */
+         /* height: max-content; */
+         gap: 15px 20px;
+     }
+
+     .hero .searchBar::-webkit-scrollbar {
+         display: none;
+     }
+
+     .hero .searchBar img {
+         width: 40px;
+         height: 40px;
+     }
+
+     .hero .searchBar p {
+         font-size: 14px;
+     }
+
+     .hero .searchBar span {
+         font-size: 14px;
+     }
+
+     .hero .searchBar .searchBtn {
+         width: 100px;
+         height: 38px;
+     }
+
+     .hero .searchBar .searchBtn .searchIcon {
+         width: 18px;
+         height: 18px;
+     }
+
+     .hero .searchBar .searchBtn p {
+         font-size: 18px;
+     }
+
+     .hero {
+         height: 650px;
+     }
+
+     .hero .searchBar .where,
+     .date,
+     .tour,
+     .searchBtn {
+         width: auto;
+         height: auto;
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         cursor: pointer;
+     }
+
+     .trendingDestinations {
+         height: 630px;
+     }
+
+     .trendingDestinations .heading {
+         width: 90%;
+         height: 104px;
+         display: block;
+         padding-top: 90px;
+     }
+
+     .trendingDestinations .trendingFlex {
+         /* border: 1px solid red;    */
+         display: flex;
+         flex-direction: column;
+         gap: 70px
+     }
+
+     .trendingDestinations .imageSlider {
+         padding-top: 0px;
+     }
+
+     .trendingDestinations .imageSlider {
+         width: 90%;
+         height: 300px;
+         /* margin: 48px auto; */
+     }
+
+     .trendingDestinations .heading .headingText {
+         width: 100%;
+     }
+
+     .trendingDestinations .heading .headingText h1 {
+         font-size: 24px;
+         line-height: 26px;
+     }
+
+     .trendingDestinations .heading .headingText p {
+         display: -webkit-box;
+         -webkit-box-orient: vertical;
+         -webkit-line-clamp: 2;
+         overflow: hidden;
+     }
+
+     .trendingDestinations .heading .headingBtns {
+         width: 92px;
+         /* border: 1px solid red; */
+         height: 38px;
+         gap: 16px;
+         align-items: center;
+         justify-content: center;
+         display: flex;
+         position: relative;
+     }
+
+     .trendingDestinations .imageSlider {
+         /* top: 314px; */
+         margin: 30px auto;
+     }
+
+     /* .adventureSection .advantureContent {
+         flex-direction: column;
+         height: auto;
+     }
+
+     .adventureSection .advantureContent .contentDiv {
+         border: 1px solid red;
+         width: 80%;
+         margin: 0px auto;
+     }
+
+     .adventureSection .advantureContent .advantureImgages .advanturePersonImage {
+         margin: 60px auto 0px;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+     }
+     .adventureSection .advantureContent .advantureImgages .advantureNatureImage {
+         width: 60%;
+         height: auto;
+     } */
+     .adventureSection .advantureContent .advantureImgages .card {
+         width: 50px;
+         height: 80px;
+     }
+
+     .adventureSection .advantureContent .advantureImgages .card .cardIcon {
+         width: 30px;
+         height: 30px;
+         padding: 0px;
+     }
+
+     .adventureSection .advantureContent .advantureImgages .card .cardDesription h1 {
+         font-size: 18px;
+         line-height: 22px;
+     }
+
+     .adventureSection .advantureContent .advantureImgages .card .cardDesription p {
+         font-size: 14px;
+         line-height: 19px;
+     }
+
+     .adventureSection .adventureInformation .adventureHeading h1 {
+         font-size: 20px;
+         line-height: 25px;
+     }
+
+     .adventureSection .adventureInformation .advantureSearch .whereContent span {
+         font-size: 14px;
+         line-height: 23px;
+     }
+
+     .adventureSection .adventureInformation .advantureSearch .img {
+         width: 10px;
+         height: 10px;
+     }
+
+     .adventureSection .adventureInformation .advantureSearch img {
+         width: 25px;
+         height: 25px;
+     }
+
+     .adventureSection .adventureInformation .advantureSearch .whereContent p {
+         font-size: 18px;
+         line-height: 18px;
+     }
+
+     .adventureSection .advantureContent .adventureInformation .advantureSearch,
+     .advantureTour,
+     .advantureDate {
+         margin: 20px auto;
+     }
+
+     .adventureSection .advantureContent {
+         margin: 40px auto;
+         gap: 10px;
+     }
+
+     .tourPackages .container .heading .headingText h1 {
+         font-size: 24px;
+         line-height: 26px;
+     }
+
+     .tourPackages .container .heading {
+         flex-direction: column;
+         gap: 10px;
+     }
+
+     .tourPackages .container .heading .headingText {
+         width: 100%;
+         padding: 0px 10px;
+     }
+
+     .tourPackages .container .heading .headingText p {
+         /* display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden; */
+         font-size: 13px;
+     }
+
+     /* .packages .packageCard .tourInfo{
+        width: 100%;
+        height: auto;
+     }
+     .packages .packageCard .tourInfo .nameAndDays{
+        width: 100%;
+     }
+     .packages .packageCard .tourInfo .nameAndDays .nameAndRating{
+        width: 100%;
+        justify-content: space-between;
+     }
+     .packages .packageCard .tourInfo .nameAndDays .days {
+        width: 100%;
+     }
+     .packages .packageCard .tourInfo .packageInclude{
+        width: 100%;
+        gap: 10px;
+     }
+     .packages .packageCard .tourInfo .packageInclude .include{
+        width: 100%;
+     }
+     .packages .packageCard .tourInfo .packageInclude .include .icon{
+        width: 100%;
+     }
+     .packages .packageCard .tourPrice{
+        width: 100%;
+     } */
+     .packages .packageCard .tourPrice .price .person p {
+         font-size: 13px;
+     }
+
+     .packages .packageCard .tourInfo .packageInclude .include p {
+         font-size: 10px;
+         line-height: 13px;
+     }
+
+     .packages .packageCard .tourInfo .nameAndDays .nameAndRating h1 {
+         font-size: 20px;
+     }
+
+     .tourPackages .container .heading .headingBtns {
+         padding: 0px 10px;
+     }
+
+     .destinations .container .images .left {
+         flex-direction: column;
+         width: 100%;
+         height: 100%;
+         align-items: center;
+     }
+
+     .destinations .container .heading .text h1 {
+         font-size: 24px;
+         line-height: 28px;
+     }
+
+     .destinations .container .heading .text p {
+         font-size: 14px
+     }
+
+     .destinations .container .images .left .left-1 {
+         flex-direction: column;
+     }
+
+     .destinations .container .images .right {
+         flex-direction: column;
+     }
+
+     /* .destinations  .h3 {
+        font-size: 16px !important;
+        line-height: 10px !important;
+     } */
+     .destinations .destinationContent .images .card {
+         /* border: 1px solid red; */
+         width: 400px;
+         height: 400px;
+     }
+
+     .destinations .container .images .right .right-2 {
+         flex-direction: column;
+     }
+
+     .destinations .destinationContent {
+         margin: 50px auto;
+     }
+
+     .destinations .container .images {
+         margin: 30px auto;
+     }
+     .testimonial .testimonialContent{
+        flex-direction: column;
+        height: 100%;
+        gap: 40px;
+     }
+     .testimonial{
+        height: 100%;
+     }
+     .testimonial .leftContent{
+        width: 100%;
+     }
+     .testimonial .customerMessages{
+        width: 100%;
+     }
+     .testimonial .customerMessages .message .review .userAndMessages .userMessage p{
+        font-size: 14px;
+        line-height: 20px;
+     }
+     .testimonial .leftContent .testimonialHeading .text h1{
+        font-size: 32px;
+        line-height: 43px;
+     }
+     .testimonial{
+        margin: 0px auto;
+        padding-bottom: 40px;
+     }
+ }
+
+ /* sm -> styel for the small devices */
+ @media (min-width:576px) and (max-width:767px) {
+
+     header .navbar .hideUl {
+         display: none;
+     }
+
+     header .navbar .mobileMenu {
+         position: fixed;
+         width: 100px;
+         background-color: black;
+         min-height: 100vh;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         right: -300px;
+         top: 0px;
+         padding: 100px;
+         min-height: 120vh;
+         z-index: 2;
+         gap: 30px;
+         justify-content: flex-start;
+         transition: 0.3s;
+         /* display:block; */
+     }
+
+     header .navbar .menuIcon {
+         display: block;
+     }
+
+     header .navbar .mobileMenu .menus .closeIcon1 {
+         display: block;
+         position: absolute;
+         top: 40px;
+         right: 40px;
+         width: 30px;
+         height: 30px;
+         background-color: #fff;
+         border-radius: 5px;
+         cursor: pointer;
+     }
+
+     header .navbar .mobileMenu .drop-down {
+         display: none;
+     }
+
+     .hero .heroText {
+         width: 70%;
+         height: 166px;
+     }
+
+     .hero .indicators {
+         width: 95%;
+         height: auto;
+     }
+
+     .hero .heroText h1 {
+         font-size: 30px;
+         line-height: 41px;
+     }
+
+     .hero .heroText p {
+         line-height: 18px;
+     }
+
+
+
+     .hero .searchBar {
+         width: 90%;
+         display: flex;
+         align-content: flex-start;
+         flex-wrap: wrap;
+         overflow-y: hidden;
+         overflow-x: auto;
+         flex-direction: column;
+         border-radius: 16px;
+         /* overflow: auto; */
+         /* height: max-content; */
+         gap: 15px 20px;
+     }
+
+     .hero .searchBar::-webkit-scrollbar {
+         display: none;
+     }
+
+     .hero .searchBar img {
+         width: 40px;
+         height: 40px;
+     }
+
+     .hero .searchBar p {
+         font-size: 14px;
+     }
+
+     .hero .searchBar .where,
+     .date,
+     .tour,
+     .searchBtn {
+         width: auto;
+         height: auto;
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         cursor: pointer;
+     }
+
+     .hero .searchBar .searchBtn {
+         width: 100px;
+         height: 38px;
+     }
+
+     .hero {
+         height: 650px;
+     }
+
+     .hero .indicators button {
+         width: 44.68px;
+         height: 44.68px;
+     }
+
+     .trendingDestinations .heading {
+         width: 90%;
+         height: 104px;
+         display: flex;
+         padding-top: 121px;
+         gap: 20px;
+     }
+
+     .trendingDestinations .heading .headingBtns {
+         width: 92px;
+         /* border: 1px solid red; */
+         height: 38px;
+         gap: 16px;
+         align-items: center;
+         justify-content: center;
+         display: flex;
+         position: relative;
+     }
+
+     .trendingDestinations .imageSlider {
+         width: 90%;
+         height: 300px;
+         /* margin: 48px auto; */
+     }
+
+     .trendingDestinations .heading .headingText {
+         width: 100%;
+     }
+
+     .trendingDestinations .heading .headingText h1 {
+         font-size: 32px;
+     }
+
+     /* .adventureSection .advantureContent {
+         flex-direction: column;
+         height: auto;
+     }
+
+     .adventureSection .advantureContent .contentDiv {
+         border: 1px solid red;
+         width: 80%;
+         margin: 0px auto;
+     }
+
+     .adventureSection .advantureContent .advantureImgages .advanturePersonImage {
+         margin: 60px auto 0px;
+         width: 100%;
+         object-fit: cover;
+     }
+
+     .adventureSection .advantureContent .advantureImgages .advantureNatureImage {
+         width: 60%;
+         height: auto;
+     } */
+     .tourPackages .container .heading .headingText h1 {
+         font-size: 32px;
+     }
+
+     .destinations .destinationContent .images .card {
+         /* border: 1px solid red; */
+         /* width:400px; */
+         height: 250px;
+     }
+
+     .destinations .h3 {
+         font-size: 14px !important;
+         line-height: 15px !important;
+     }
+
+     .destinations .destinationContent {
+         margin: 35px auto;
+     }
+
+     .destinations .destinationContent .images .card {
+         /* border: 1px solid red; */
+         width: 170px;
+         height: 250px;
+     }
+     .testimonial .testimonialContent{
+        flex-direction: column;
+        gap: 40px;
+        height: 100%;
+     }
+     .testimonial .leftContent{
+        width: 100%;
+     }
+     .testimonial .customerMessages{
+        width: 100%;
+     }
+     .testimonial{
+        margin: 0px;
+        padding-bottom: 40px;
+        height: 100%;
+     }
+ }
+
+ /* md -> style for the medium devices  */
+ @media (min-width:768px) and (max-width:991px) {
+     /* header .navbar .drop-down{
+        display: block;
+    } */
+
+     header .navbar .mobileMenu {
+         position: fixed;
+         width: 100px;
+         background-color: black;
+         min-height: 100vh;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         right: -300px;
+         top: 0px;
+         padding: 100px;
+         min-height: 120vh;
+         z-index: 2;
+         gap: 30px;
+         justify-content: flex-start;
+         transition: 0.3s;
+         /* display:block; */
+     }
+
+     header .navbar .drop-down .menuIcon {
+         display: block;
+     }
+
+     header .navbar .hideUl {
+         display: none;
+     }
+
+     header .navbar .mobileMenu .menus .closeIcon1 {
+         display: block;
+         position: absolute;
+         top: 40px;
+         right: 40px;
+         width: 30px;
+         height: 30px;
+         background-color: #fff;
+         border-radius: 5px;
+         cursor: pointer;
+     }
+
+     header .navbar .mobileMenu .drop-down {
+         display: none;
+     }
+
+     .hero .indicators {
+         width: 95%;
+     }
+
+     .hero .heroText {
+         width: 70%;
+     }
+
+     .hero .heroText h1 {
+         font-size: 40px;
+         line-height: 55px;
+     }
+
+     .hero .heroText p {
+         line-height: 28px;
+     }
+
+     .hero .searchBar {
+         width: 719px;
+         height: 70px;
+     }
+
+     .trendingDestinations .heading {
+         width: 90%;
+         height: 104px;
+         padding-top: 121px;
+         /* display: block; */
+     }
+
+     /* .trendingDestinations .heading .headingBtns {
+                border: 1px solid red;
+                width: 92px;
+                border: 1px solid red;
+                height: 38px;
+                gap: 16px;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                position: relative;
+            } */
+     .trendingDestinations .imageSlider {
+         width: 90%;
+         height: 300px;
+         /* margin: 48px auto; */
+     }
+
+     /* .adventureSection .advantureContent {
+         flex-direction: column;
+         height: auto;
+     }
+
+     .adventureSection .advantureContent .contentDiv {
+         border: 1px solid red;
+         width: 80%;
+         margin: 0px auto;
+     }
+
+     .adventureSection .advantureContent .advantureImgages .advanturePersonImage {
+         margin: 60px auto 0px;
+         width: 100%;
+         height: auto;
+     }
+
+     .adventureSection .advantureContent .advantureImgages .advantureNatureImage {
+         width: 60%;
+         height: auto;
+     } */
+     .packages .packageCard .tourInfo .packageInclude .include p {
+         font-size: 13px;
+     }
+
+     .destinations .destinationContent .images .card {
+         /* border: 1px solid red; */
+         /* width:auto; */
+         height: 300px;
+     }
+
+     .destinations .h3 {
+         font-size: 16px !important;
+         line-height: 10px !important;
+     }
+
+     .destinations .destinationContent .images .card {
+         /* border: 1px solid red; */
+         width: 200px;
+         height: 280px;
+     }
+     .testimonial .leftContent .testimonialHeading .text h1{
+        font-size: 27px;
+        line-height: 35px;
+     }
+     .testimonial .customerMessages .message .review .userAndMessages .userMessage p{
+        font-size: 14px;
+        line-height: 21px;
+     }
+     .testimonial .customerMessages .message .review{
+        gap: 16px;
+     }
+     .testimonial .customerMessages .message .review .userAndMessages{
+        gap: 26px;
+     }
+     .testimonial .customerMessages .message{
+        padding: 33px;
+     }
+     .testimonial .leftContent .happyCustomers p{
+        font-size: 15px;
+     }
+     .testimonial{
+        margin: 0px;
+        padding-bottom: 40px;
+        height: 100%;
+     }
+ }
+
+
+ /* lg -> style for the large devices */
+ @media(min-width:992px) and (max-width:1199px) {
+
+     /* this hide desktop ul */
+     header .navbar .hideUl {
+         display: none;
+     }
+
+     /* header .navbar .drop-down .auth {
+         align-items: center;
+     } */
+
+     /* this is for the show the menu icon in this media query */
+     header .navbar .drop-down .menuIcon {
+         display: block;
+     }
+
+     header .navbar .mobileMenu {
+         position: fixed;
+         width: 100px;
+         background-color: black;
+         min-height: 100vh;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         right: -300px;
+         top: 0px;
+         padding: 100px;
+         min-height: 120vh;
+         z-index: 2;
+         gap: 30px;
+         justify-content: flex-start;
+         transition: 0.3s;
+         /* display:block; */
+     }
+
+     /* this hide drop-dwon in the sidebar  */
+     header .navbar .mobileMenu .drop-down {
+         display: none;
+     }
+
+     header .navbar .mobileMenu .menus .closeIcon1 {
+         display: block;
+         position: absolute;
+         top: 40px;
+         right: 40px;
+         width: 30px;
+         height: 30px;
+         background-color: #fff;
+         border-radius: 5px;
+         cursor: pointer;
+     }
+
+     .hero .indicators {
+         width: 95%;
+     }
+
+     .hero .heroText {
+         width: 70%;
+     }
+
+     .hero .heroText h1 {
+         font-size: 52px;
+         line-height: 65px;
+     }
+
+     .trendingDestinations .heading {
+         width: 90%;
+         height: 104px;
+         padding-top: 121px;
+         /* display: block; */
+     }
+
+     .trendingDestinations .imageSlider {
+         width: 90%;
+         height: 300px;
+         /* margin: 48px auto; */
+     }
+
+     /* .adventureSection .advantureContent {
+         flex-direction: column;
+         height: auto;
+     } */
+
+     /* .adventureSection .advantureContent .contentDiv {
+         border: 1px solid red;
+         width: 80%;
+         margin: 0px auto;
+     } */
+
+     /* .adventureSection .advantureContent .advantureImgages .advanturePersonImage {
+         margin: 60px auto 0px;
+         width: 100%;
+         height: auto;
+     } */
+
+     /* .adventureSection .advantureContent .advantureImgages .card {
+         border: 1px solid red;
+         bottom: 25px;
+     } */
+
+     .adventureSection .advantureContent .advantureImgages .advantureNatureImage {
+         width: 40%;
+         height: auto;
+     }
+     .testimonial .leftContent .testimonialHeading .text h1{
+        font-size: 32px;
+        line-height:35px;
+     }
+     .testimonial .customerMessages .message .review .userAndMessages .userMessage p{
+        font-size: 14px;
+        line-height: 21px;
+     }
+ }
+
+ /* xl -> style for extra large devices  */
+ @media(min-width:1200px) and (max-width:1399px) {
+     .hero .indicators {
+         width: 95%;
+     }
+
+     .hero .heroText {
+         width: 70%;
+     }
+
+     .hero .heroText h1 {
+         font-size: 60px;
+         line-height: 65px;
+     }
+
+     .trendingDestinations .heading {
+         width: 90%;
+         height: 104px;
+         /* display: block; */
+     }
+
+     .trendingDestinations .imageSlider {
+         width: 90%;
+         height: 300px;
+     }
+
+     .adventureSection .advantureContent .advantureImgages .advanturePersonImage {
+         width: 100%;
+         object-fit: cover;
+     }
+ }
+
+ /* xxl -> styel for the extra extra large devices */
+ @media(min-width:1400px) {}
+
+
+
+
+ @media(max-width:452px) {
+     .hero .indicators {
+         width: 95%;
+         height: auto;
+     }
+
+     .hero .heroText {
+         width: 70%;
+         height: 244px;
+     }
+
+     .hero .heroText {
+         width: 70%;
+         height: auto;
+     }
+
+     .destinations .destinationContent .images .card {
+         /* border: 1px solid red; */
+         width: 300px;
+         height: 400px;
+     }
+     .testimonial .leftContent .testimonialHeading .text h1{
+        font-size: 24px;
+        line-height: 31px;
+     }
+     .testimonial .leftContent .testimonialHeading .text{
+        gap: 30px;
+     }
+     .testimonial .leftContent .happyCustomers h1{
+        font-size: 24px;
+     }
+     .testimonial .leftContent .rating .frame h1{
+        font-size: 24px;
+     }
+     .testimonial .leftContent .rating .frame img{
+        width: 18px;
+        height: 18px;
+     }
+     .testimonial .customerMessages .message{
+        height: 100%;
+        padding: 20px;
+     }
+     .testimonial .customerMessages .message .review .userAndMessages{
+        gap: 16px;
+     }
+     .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user .name h1{
+        font-size: 14px;
+     }
+     .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user .userPhotoName{
+        gap: 10px;
+     }
+     .testimonial .customerMessages .message .review{
+        height: 100%;
+     }
+ }
+
+ /* @media(max-width:450px) {
+     .destinations .container .images .right .right-2 {
+         flex-direction: column;
+     }
+ } */
