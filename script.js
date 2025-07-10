@@ -28,7 +28,7 @@ function showImg(index) {
 }
 
 
-document.querySelector('.leftArrow').addEventListener('', () => {
+document.querySelector('.leftArrow').addEventListener('click', () => {
     // left arrow are use to the decrise the index of the img array 
     // in this this -1 from the current the array index if now we are at the 0 index and i click on the left arrow then 0 -1 =  -1 then our condition becom true then it go to last img
     index = index - 1;
