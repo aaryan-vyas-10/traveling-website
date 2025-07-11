@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Website</title>
     <link rel="stylesheet" href="style.css">
-
     <script src="https://kit.fontawesome.com/d94ba61043.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body class="body">
@@ -34,8 +32,6 @@
                     </div>
                     <img class="menuIcon" src="img/menu.png" alt="menu icon" />
                 </div>
-
-                <!-- for mobile Menu -->
                 <div class="mobileMenu navbar">
                     <ul class="menus mobileMenus">
                         <img class="closeIcon1" src="img/close-icon.png" alt="close icon" />
@@ -57,26 +53,29 @@
                     </div>
                 </div>
 
-                <!-- end -->
             </div>
         </div>
     </header>
 
-    <!-- for mobile device sidebar -->
-
     <section class="hero">
-        <!-- <div class="container"> -->
-        <div class="indicators">
-            <button><img src="img/left-arrow.png" alt="left-arrow" class="leftArrow" /></button>
-            <button><img src="img/right-arrow.png" alt="right-arrow" class="rightArrow" /></button>
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide-1"></div>
+                <div class="swiper-slide slide-2"></div>
+                <div class="swiper-slide slide-3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="indicators">
+                <button class="hero-prev"><img src="img/left-arrow.png" alt="left-arrow" class="leftArrow" /></button>
+                <button class="hero-next"><img src="img/right-arrow.png" alt="right-arrow"
+                        class="rightArrow" /></button>
+            </div>
         </div>
-
-        <section class="heroText">
+        <div class="heroText">
             <p>Seamless Booking: 15,000+ Multi-Day Adventures Await</p>
             <h1>Await Your Exploration with Tailored Tours & Packages</h1>
-        </section>
-
-        <section class="searchBar">
+        </div>
+        <div class="searchBar">
             <div class="where">
                 <img src="img/where.png" alt="where image" />
                 <div class="whereContent">
@@ -102,8 +101,7 @@
                 <img src="img/bx-search-alt.png" class="searchIcon" alt="search icon" />
                 <p>Search</p>
             </button>
-        </section>
-        <!-- </div> -->
+        </div>
     </section>
 
     <section class="trendingDestinations">
@@ -116,10 +114,8 @@
                         global adventure awaits.</p>
                 </div>
                 <div class="headingBtns">
-                    <button class="swiper-button-prev imageSlider-prev"><img src="img/1.png"
-                            alt="heading buttons" /></button>
-                    <button class="swiper-button-next  imageSlider-next headingBtn2"><img src="img/2.png"
-                            alt="heading buttons" /></button>
+                    <button class="imageSlider-prev"><img src="img/1.png" alt="heading buttons" /></button>
+                    <button class="imageSlider-next headingBtn2"><img src="img/2.png" alt="heading buttons" /></button>
                 </div>
             </div>
             <div class="swiper imageSlider">
@@ -233,10 +229,8 @@
                         cuisine, and unforgettable experiences</p>
                 </div>
                 <div class="headingBtns">
-                    <button class="swiper-button-prev  packages-prev"><img src="img/1.png"
-                            alt="heading buttons" /></button>
-                    <button class="swiper-button-next packages-next"><img src="img/Vector-right.png"
-                            alt="heading buttons" /></button>
+                    <button class="packages-prev"><img src="img/1.png" alt="heading buttons" /></button>
+                    <button class="packages-next"><img src="img/Vector-right.png" alt="heading buttons" /></button>
                 </div>
             </div>
             <div class="swiper packages">
@@ -887,10 +881,8 @@
                         <p>Get inspired, informed, and entertained with our travel stories, tips, and guides.</p>
                     </div>
                     <div class="indicators">
-                        <button class="swiper-button-prev blogs-prev"><img src="img/1.png"
-                                alt="heading buttons" /></button>
-                        <button class="swiper-button-next blogs-next"><img src="img/Vector-right.png"
-                                alt="heading buttons" /></button>
+                        <button class="blogs-prev"><img src="img/1.png" alt="heading buttons" /></button>
+                        <button class="blogs-next"><img src="img/Vector-right.png" alt="heading buttons" /></button>
                     </div>
                 </div>
                 <div class="swiper blogs">
@@ -1005,23 +997,14 @@
 
 </body>
 
-<script src="script.js">
-
-</script>
-
+<script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    // swiper js code for the trending destiation
-    // in this the new Swiper is the constructor which has the 2 argument -> 1 : css selector , 2 : configration object like , loop , navigation , autoplay
-    // slidesPreView : this will show the slied as per the container width at the time
     const swiper = new Swiper('.swiper.imageSlider', {
         slidesPerView: 6,
         slidesPerGroup: 1,
         spaceBetween: 20,
         loop: false,
-        // autoplay : {
-        //     delay : 2500,
-        // },
         navigation: {
             nextEl: '.imageSlider-next',
             prevEl: '.imageSlider-prev',
@@ -1050,8 +1033,6 @@
             },
         }
     });
-
-    // swiper for the tour packages
 
     const tourPackagesSwiper = new Swiper('.swiper.packages', {
         slidesPerView: 3,
@@ -1087,13 +1068,11 @@
         }
     });
 
-    //  Swiper for the blog section
-
     const blogsSwiper = new Swiper('.blogs', {
         slidesPerView: 3,
         slidesPerGroup: 1,
         spaceBetween: 30,
-        loop:true,
+        loop: true,
         navigation: {
             nextEl: '.blogs-next',
             prevEl: '.blogs-prev',
@@ -1101,26 +1080,39 @@
         breakpoints: {
             320: {
                 slidesPerView: 1.25,
-                spaceBetween: 15,
             },
             576: {
                 slidesPerView: 1.5,
-                spaceBetween: 20,
             },
             768: {
                 slidesPerView: 2,
-                spaceBetween: 25,
             },
             1024: {
-                slidesPerView: 2    ,
-                spaceBetween: 30,
+                slidesPerView: 2,
             },
             1200: {
-                slidesPerView:3,
-                spaceBetween:30,
+                slidesPerView: 3,
             }
         }
     });
-</script>
 
+    const swiperHero = new Swiper(".heroSwiper", {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".hero-prev",
+            prevEl: ".hero-next",
+        },
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+    });
+</script>
 </html>
