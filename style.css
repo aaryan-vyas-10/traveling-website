@@ -1,13 +1,19 @@
+ @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
  * {
      margin: 0;
      padding: 0;
-     font-family: sans-serif;
+     font-family: "Ubuntu", sans-serif;
  }
 
 
  body {
      overflow-x: hidden;
      /* box-sizing: border-box; */
+ }
+
+ body::-webkit-scrollbar {
+     display: none;
  }
 
  /* this is the use for the remove the globally gray and blue color which come when click on anythign */
@@ -1700,7 +1706,7 @@
      gap: 5px;
      display: flex;
      align-items: center;
-     justify-content:space-between;
+     justify-content: space-between;
      box-sizing: border-box;
      width: 100%;
  }
@@ -1872,7 +1878,7 @@
      height: 832px;
      display: flex;
      flex-direction: column;
-     gap: 48px;
+     /* gap: 48px; */
  }
 
  .blogSection .blogHeading {
@@ -1932,7 +1938,8 @@
      /* width: 1320px; */
      height: 544px;
      display: flex;
-     gap: 30px;
+     /* gap: 30px; */
+     padding-top: 47px;
      overflow: hidden;
      margin: 0px auto;
      scroll-behavior: smooth;
@@ -1948,16 +1955,19 @@
  .blogSection .blogs .blog:hover .textBlog h1 {
      color: rgba(236, 145, 5, 1);
  }
- .blogSection .blogs .swiper-wrapper{
-    display: flex;
-    /* border: 1px solid red; */
-    width: 1320px;
+
+ .blogSection .blogs .swiper-wrapper {
+     display: flex;
+     /* border: 1px solid red; */
+     width: 1320px;
  }
- .blogSection .blogs .swiper-wrapper .swiper-slide{
-    /* width: 100%; */
-    /* width:420px !important; */
-    /* flex-shrink: 0; */
+
+ .blogSection .blogs .swiper-wrapper .swiper-slide {
+     /* width: 100%; */
+     /* width:420px !important; */
+     /* flex-shrink: 0; */
  }
+
  .blogSection .blogs .blog {
      width: 420px;
      height: 450px;
@@ -1972,8 +1982,9 @@
      transition: 0.4s ease-in-out;
      /* transition: 1s ease-in-out; */
  }
- .blogSection  .blogs .blog img {
-    width: 100%;
+
+ .blogSection .blogs .blog img {
+     width: 100%;
      max-width: 388px;
      height: 200px;
      border-radius: 14px;
@@ -1989,7 +2000,7 @@
      flex-direction: column;
  }
 
- .blogSection  .blogs .blog .textBlog h1 {
+ .blogSection .blogs .blog .textBlog h1 {
      /* width: 388px;
      height: 48px; */
      font-weight: 700;
@@ -2048,7 +2059,7 @@
      color: rgba(236, 145, 5, 1);
  }
 
- .blogSection  .allBlogButton {
+ .blogSection .allBlogButton {
      width: 187px;
      height: 46px;
      border-radius: 100px;
@@ -2065,7 +2076,7 @@
      line-height: 30px;
      color: rgba(255, 255, 255, 1);
      cursor: pointer;
-     margin: 0px auto;
+     margin: 40px auto;
  }
 
  /* css for the footer section */
@@ -2078,6 +2089,8 @@
      display: flex;
      flex-direction: column;
      justify-content: space-between;
+     overflow-x: hidden;
+
  }
 
  .footer .footerContent {
@@ -2088,12 +2101,13 @@
      display: flex;
      justify-content: space-between;
      box-sizing: border-box;
+     gap: 30px;
  }
 
  .footer .footerContent .footerLogo {
      /* border: 1px solid orange; */
      width: 420px;
-     height: 168px;
+     height: auto;
      gap: 32px;
      display: flex;
      flex-direction: column;
@@ -2106,8 +2120,6 @@
  }
 
  .footer .footerContent .footerLogo p {
-     width: 420px;
-     height: 96px;
      opacity: 76%;
      color: rgba(255, 255, 255, 1);
      font-weight: 500;
@@ -2141,7 +2153,7 @@
  .footer .footerContent .footerLinks {
      /* border: 1px solid red; */
      display: flex;
-     align-items: center;
+     align-items: flex-start;
      flex-direction: column;
      /* justify-content: center; */
      width: 195px;
@@ -2151,8 +2163,8 @@
 
  .footer .footerContent .footerLinks h4 {
      /* border: 1px solid red; */
-     width: 195px;
-     height: 24px;
+     /* width: 195px;
+     height: 24px; */
      font-size: 20px;
      font-weight: 700;
      line-height: 24px;
@@ -2161,8 +2173,8 @@
 
  .footer .footerContent .footerLinks ul {
      list-style: none;
-     width: 195px;
-     height: 14px;
+     /* width: 195px;
+     height: 14px; */
      gap: 16px;
      display: flex;
      flex-direction: column;
@@ -2182,16 +2194,16 @@
  .footer .footerContent .newsletter {
      /* border: 1px solid red; */
      width: 420px;
-     height: 168px;
+     height: auto;
      gap: 32px;
      display: flex;
      flex-direction: column;
-     align-items: center;
+     align-items: flex-start;
  }
 
  .footer .footerContent .newsletter h4 {
-     width: 420px;
-     height: 24px;
+     /* width: 420px;
+     height: 24px; */
      font-weight: 700;
      font-size: 20px;
      line-height: 24px;
@@ -2208,8 +2220,8 @@
  }
 
  .footer .footerContent .newsletter .form p {
-     width: 420px;
-     height: 48px;
+     /* width: 420px;
+     height: 48px; */
      opacity: 76%;
      font-weight: 500;
      font-size: 16px;
@@ -2219,7 +2231,7 @@
 
  .footer .footerContent .newsletter form {
      /* border: 2px solid red; */
-     width: 420px;
+     /* width: 420px; */
      height: 48px;
      gap: 16px;
      display: flex;
@@ -2229,21 +2241,21 @@
  }
 
  .footer .footerContent .newsletter form input {
-     width: 420px;
+     width: 100%;
      height: 48px;
-
      border: none;
      outline: none;
      padding: 8px 16px 8px 16px;
      gap: 16px;
      box-sizing: border-box;
-     background-color: rgba(32, 35, 38, 1);
+     /* background-color: rgba(32, 35, 38, 1); */
+     background: transparent;
      color: rgba(242, 245, 247, 1);
  }
 
  .footer .footerContent .newsletter form input::placeholder {
-     width: 388px;
-     height: 24px;
+     /* width: 388px;
+     height: 24px; */
      opacity: 76%;
      font-weight: 500;
      font-size: 16px;
@@ -2269,7 +2281,7 @@
  }
 
  .footer .footerBottom {
-     /* border: 1px solid red; */
+     /* border: 5px solid navy; */
      width: 100%;
      box-sizing: border-box;
      height: 48px;
@@ -2287,7 +2299,6 @@
 
  .footer .footerBottom .footerBottomContent span {
      /* border: 1px solid orange; */
-     width: 333px;
      height: 24px;
      font-weight: 500;
      font-size: 16px;
@@ -2299,7 +2310,7 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     width: 238px;
+     /* width: 238px; */
      height: 24px;
      gap: 12px;
  }
@@ -2396,14 +2407,16 @@
      /* .destinations .container .images .right .right-2 {
          aspect-ratio: 2/1;
      } */
-     .blogSection .blogContent{
-        width: 100%;
-        /* border: 1px solid red; */
+     .blogSection .blogContent {
+         width: 100%;
+         /* border: 1px solid red; */
      }
-     .blogSection .blogContent .blogs{
-        width: 100%;
-        /* border: 1px solid red; */
+
+     .blogSection .blogContent .blogs {
+         width: 100%;
+         /* border: 1px solid red; */
      }
+
      /* .blogSection .container .blogs .blog img{
         width: 100%;
      } */
@@ -2920,53 +2933,120 @@
      .destinations .container .images {
          margin: 30px auto;
      }
-     .testimonial .testimonialContent{
-        flex-direction: column;
-        height: 100%;
-        gap: 40px;
+
+     .testimonial .testimonialContent {
+         flex-direction: column;
+         height: 100%;
+         gap: 55px;
      }
-     .testimonial{
-        height: 100%;
+
+     .testimonial {
+         height: 100%;
+         margin: 0px auto;
+         padding-bottom: 55px;
      }
-     .testimonial .leftContent{
-        width: 100%;
+
+     .testimonial .leftContent {
+         width: 100%;
      }
-     .testimonial .customerMessages{
-        width: 100%;
+
+     .testimonial .customerMessages {
+         width: 100%;
      }
-     .testimonial .customerMessages .message .review .userAndMessages .userMessage p{
-        font-size: 14px;
-        line-height: 20px;
+
+     .testimonial .customerMessages .message .review .userAndMessages .userMessage p {
+         font-size: 14px;
+         line-height: 20px;
      }
-     .testimonial .leftContent .testimonialHeading .text h1{
-        font-size: 32px;
-        line-height: 43px;
+
+     .testimonial .leftContent .testimonialHeading .text h1 {
+         font-size: 32px;
+         line-height: 43px;
      }
-     .testimonial{
-        margin: 0px auto;
-        padding-bottom: 40px;
+
+     .blogSection .blogHeading {
+         flex-direction: column;
+         padding-top: 45px;
+         gap: 20px;
+         height: auto;
      }
-     .blogSection .blogHeading{
-        flex-direction: column;
-        padding-top: 45px;
-        gap: 20px;
-        height: auto;
+
+     .blogSection .blogContent {
+         height: 100%;
+         gap: 7px;
      }
-     .blogSection .blogContent{
-        height: 100%;
-        gap: 7px;
+
+     .blogSection .blogHeading .text p {
+         font-size: 14px;
+         line-height: 13px;
      }
-     .blogSection .blogHeading .text p{
-        font-size: 14px;
-        line-height: 13px;
+
+     .blogSection .blogHeading .text h1 {
+         font-size: 24px;
+         line-height: 37px;
      }
-     .blogSection .blogHeading .text h1{
-        font-size: 24px;
-        line-height: 37px;
+
+     .blogSection .blogs .swiper-wrapper {
+         height: auto;
+         padding-top: 20px;
      }
-     .blogSection  .blogs .swiper-wrapper{
-        height: auto;
-        padding-top: 20px;
+
+     .footer {
+         height: auto;
+     }
+
+     .footer .footerContent {
+         flex-wrap: wrap;
+         justify-content: flex-start;
+     }
+
+     .footer .footerContent .footerLogo {
+         width: 100%;
+     }
+
+     .footer .footerBottom .footerBottomContent {
+         flex-direction: column;
+         gap: 6px;
+     }
+
+     .footer .footerContent .newsletter .form {
+         width: 100%;
+     }
+
+     .footer .footerContent .newsletter form input {
+         width: 100%;
+     }
+
+     .footer .footerContent .footerLogo .socialIcons {
+         gap: 21px;
+     }
+
+     .footer .footerBottom {
+         height: 80px;
+     }
+
+     .footer .footerBottom .footerBottomContent span {
+         font-size: 14px;
+     }
+
+     .footer .footerBottom .footerBottomContent .footerBottomLinks a {
+         font-size: 14px;
+     }
+
+     .footer .footerBottom .footerBottomContent .footerBottomLinks {
+         line-height: 16px;
+     }
+
+     .footer .footerBottom .footerBottomContent .footerBottomLinks {
+         justify-content: flex-start;
+     }
+
+     .blogSection .blogContent .blogs {
+         padding-top: 17px;
+     }
+
+     .blogSection .allBlogButton {
+         margin: 8px auto;
      }
  }
 
@@ -3122,6 +3202,7 @@
      .trendingDestinations .heading .headingText h1 {
          font-size: 32px;
      }
+
      .tourPackages .container .heading .headingText h1 {
          font-size: 32px;
      }
@@ -3144,21 +3225,59 @@
          width: 170px;
          height: 250px;
      }
-     .testimonial .testimonialContent{
-        flex-direction: column;
-        gap: 40px;
-        height: 100%;
+
+     .testimonial .testimonialContent {
+         flex-direction: column;
+         gap: 40px;
+         height: 100%;
      }
-     .testimonial .leftContent{
-        width: 100%;
+
+     .testimonial .leftContent {
+         width: 100%;
      }
-     .testimonial .customerMessages{
-        width: 100%;
+
+     .testimonial .customerMessages {
+         width: 100%;
      }
-     .testimonial{
-        margin: 0px;
-        padding-bottom: 40px;
-        height: 100%;
+
+     .testimonial {
+         margin: 0px;
+         padding-bottom: 40px;
+         height: 100%;
+     }
+
+     .footer {
+         height: auto;
+     }
+
+     .footer .footerContent {
+         flex-wrap: wrap;
+         justify-content: flex-start;
+     }
+
+     .footer .footerContent .footerLogo {
+         width: 100%;
+     }
+
+     .footer .footerBottom .footerBottomContent {
+         flex-direction: column;
+         gap: 6px;
+     }
+
+     .footer .footerBottom {
+         height: 80px;
+     }
+
+     .footer .footerContent .newsletter .form {
+         width: 100%;
+     }
+
+     .footer .footerContent .newsletter form input {
+         width: 100%;
+     }
+
+     .footer .footerBottom .footerBottomContent .footerBottomLinks {
+         justify-content: flex-start;
      }
  }
 
@@ -3235,11 +3354,13 @@
          padding-top: 121px;
          /* display: block; */
      }
+
      .trendingDestinations .imageSlider {
          width: 90%;
          height: 300px;
          /* margin: 48px auto; */
      }
+
      .packages .packageCard .tourInfo .packageInclude .include p {
          font-size: 13px;
      }
@@ -3260,30 +3381,59 @@
          width: 200px;
          height: 280px;
      }
-     .testimonial .leftContent .testimonialHeading .text h1{
-        font-size: 27px;
-        line-height: 35px;
+
+     .testimonial .leftContent .testimonialHeading .text h1 {
+         font-size: 27px;
+         line-height: 35px;
      }
-     .testimonial .customerMessages .message .review .userAndMessages .userMessage p{
-        font-size: 14px;
-        line-height: 21px;
+
+     .testimonial .customerMessages .message .review .userAndMessages .userMessage p {
+         font-size: 14px;
+         line-height: 21px;
      }
-     .testimonial .customerMessages .message .review{
-        gap: 16px;
+
+     .testimonial .customerMessages .message .review {
+         gap: 16px;
      }
-     .testimonial .customerMessages .message .review .userAndMessages{
-        gap: 26px;
+
+     .testimonial .customerMessages .message .review .userAndMessages {
+         gap: 26px;
      }
-     .testimonial .customerMessages .message{
-        padding: 33px;
+
+     .testimonial .customerMessages .message {
+         padding: 33px;
      }
-     .testimonial .leftContent .happyCustomers p{
-        font-size: 15px;
+
+     .testimonial .leftContent .happyCustomers p {
+         font-size: 15px;
      }
-     .testimonial{
-        margin: 0px;
-        padding-bottom: 40px;
-        height: 100%;
+
+     .testimonial {
+         margin: 0px;
+         padding-bottom: 40px;
+         height: 100%;
+     }
+
+     .footer {
+         height: auto;
+     }
+
+     .footer .footerContent {
+         flex-wrap: wrap;
+         justify-content: flex-start;
+     }
+
+     .footer .footerContent .footerLogo {
+         flex: 1 1 400px;
+         /* border: 1px solid red; */
+     }
+
+     .footer .footerContent .newsletter .form {
+         width: 100%;
+     }
+
+     .footer .footerContent .newsletter form input {
+         width: 100%;
      }
  }
 
@@ -3393,13 +3543,37 @@
          width: 40%;
          height: auto;
      }
-     .testimonial .leftContent .testimonialHeading .text h1{
-        font-size: 32px;
-        line-height:35px;
+
+     .testimonial .leftContent .testimonialHeading .text h1 {
+         font-size: 32px;
+         line-height: 35px;
      }
-     .testimonial .customerMessages .message .review .userAndMessages .userMessage p{
-        font-size: 14px;
-        line-height: 21px;
+
+     .testimonial .customerMessages .message .review .userAndMessages .userMessage p {
+         font-size: 14px;
+         line-height: 21px;
+     }
+
+     .footer {
+         height: auto;
+     }
+
+     .footer .footerContent {
+         flex-wrap: wrap;
+         justify-content: flex-start;
+     }
+
+     .footer .footerContent .footerLogo {
+         flex: 1 1 400px;
+         /* border: 1px solid red; */
+     }
+
+     .footer .footerContent .newsletter .form {
+         width: 100%;
+     }
+
+     .footer .footerContent .newsletter form input {
+         width: 100%;
      }
  }
 
@@ -3433,13 +3607,40 @@
          width: 100%;
          object-fit: cover;
      }
+
+     .footer {
+         height: auto;
+     }
+
+     .footer .footerContent .newsletter .form {
+         width: 100%;
+     }
+
+     .footer .footerContent .newsletter form input {
+         width: 100%;
+     }
+
  }
 
  /* xxl -> styel for the extra extra large devices */
  @media(min-width:1400px) {}
 
 
+ @media(max-width:467px) {
+     .footer .footerContent .footerLinks {
+         flex: 1 1 120px;
+         gap: 25px;
+     }
 
+     .footer .footerContent .footerLinks h4 {
+         font-size: 16px;
+     }
+
+     .footer .footerContent .footerLinks ul li a {
+         font-size: 15px;
+     }
+
+ }
 
  @media(max-width:452px) {
      .hero .indicators {
@@ -3462,38 +3663,48 @@
          width: 300px;
          height: 400px;
      }
-     .testimonial .leftContent .testimonialHeading .text h1{
-        font-size: 24px;
-        line-height: 31px;
+
+     .testimonial .leftContent .testimonialHeading .text h1 {
+         font-size: 24px;
+         line-height: 31px;
      }
-     .testimonial .leftContent .testimonialHeading .text{
-        gap: 30px;
+
+     .testimonial .leftContent .testimonialHeading .text {
+         gap: 30px;
      }
-     .testimonial .leftContent .happyCustomers h1{
-        font-size: 24px;
+
+     .testimonial .leftContent .happyCustomers h1 {
+         font-size: 24px;
      }
-     .testimonial .leftContent .rating .frame h1{
-        font-size: 24px;
+
+     .testimonial .leftContent .rating .frame h1 {
+         font-size: 24px;
      }
-     .testimonial .leftContent .rating .frame img{
-        width: 18px;
-        height: 18px;
+
+     .testimonial .leftContent .rating .frame img {
+         width: 18px;
+         height: 18px;
      }
-     .testimonial .customerMessages .message{
-        height: 100%;
-        padding: 20px;
+
+     .testimonial .customerMessages .message {
+         height: 100%;
+         padding: 20px;
      }
-     .testimonial .customerMessages .message .review .userAndMessages{
-        gap: 16px;
+
+     .testimonial .customerMessages .message .review .userAndMessages {
+         gap: 16px;
      }
-     .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user .name h1{
-        font-size: 14px;
+
+     .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user .name h1 {
+         font-size: 14px;
      }
-     .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user .userPhotoName{
-        gap: 10px;
+
+     .testimonial .customerMessages .message .review .userAndMessages .userAndRate .user .userPhotoName {
+         gap: 10px;
      }
-     .testimonial .customerMessages .message .review{
-        height: 100%;
+
+     .testimonial .customerMessages .message .review {
+         height: 100%;
      }
  }
 
