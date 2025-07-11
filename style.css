@@ -10,10 +10,12 @@
  body {
      overflow-x: hidden;
  }
+
  /* this is the use for the remove the globally gray and blue color which come when click on anythign */
  * {
      -webkit-tap-highlight-color: transparent;
  }
+
  /* header Section */
  header {
      /* border: 1px solid green; */
@@ -48,10 +50,11 @@
 
  header .navbar .menuIcon {
      /* border: 1px solid red; */
-     width: 35px;
-     height: 35px;
+     width: 30px;
+     height: 30px;
      background-color: #ffffff;
-     border-radius: 4px;
+     border-radius: 20px;
+     padding: 4px;
      border: none;
      display: none;
  }
@@ -1928,10 +1931,7 @@
 
  .blogSection .blogContent .blogs {
      /* border: 2px solid red; */
-     /* width: 1320px; */
-     height: 544px;
      display: flex;
-     /* gap: 30px; */
      padding-top: 47px;
      overflow: hidden;
      margin: 0px auto;
@@ -2039,7 +2039,7 @@
      background: transparent;
      cursor: pointer;
      box-sizing: border-box;
-     margin: 40px 16px;
+     margin: 49px 16px 12px 3px;
  }
 
  .blogSection button p {
@@ -2334,7 +2334,7 @@
 
      .tourPackages .packages {
          width: 100%;
-         padding-top: 80px;
+         padding-top: 18px;
      }
 
      /* .packages .packageCard{
@@ -2569,11 +2569,10 @@
          position: absolute;
          top: 26px;
          right: 20px;
-         width: 25px;
-         height: 25px;
-         ;
+         width: 30px;
+         height: 30px;
+         border-radius: 20px;
          background-color: #fff;
-         border-radius: 5px;
          cursor: pointer;
      }
 
@@ -2825,7 +2824,8 @@
 
      .tourPackages .container .heading {
          flex-direction: column;
-         gap: 10px;
+         gap: 21px;
+         height: auto;
      }
 
      .tourPackages .container .heading .headingText {
@@ -2975,7 +2975,6 @@
 
      .blogSection .blogHeading .text p {
          font-size: 14px;
-         line-height: 13px;
      }
 
      .blogSection .blogHeading .text h1 {
@@ -2985,7 +2984,7 @@
 
      .blogSection .blogs .swiper-wrapper {
          height: auto;
-         padding-top: 20px;
+         /* padding-top: 20px; */
      }
 
      .footer {
@@ -3023,7 +3022,7 @@
      }
 
      .footer .footerBottom .footerBottomContent span {
-         font-size: 14px;
+         font-size: 13px;
      }
 
      .footer .footerBottom .footerBottomContent .footerBottomLinks a {
@@ -3038,12 +3037,16 @@
          justify-content: flex-start;
      }
 
+     .blogSection {
+         height: auto;
+     }
+
      .blogSection .blogContent .blogs {
          padding-top: 17px;
      }
 
      .blogSection .allBlogButton {
-         margin: 8px auto;
+         margin: 30px auto;
      }
  }
 
@@ -3085,10 +3088,10 @@
          position: absolute;
          top: 26px;
          right: 20px;
-         width: 25px;
-         height: 25px;
+         width: 30px;
+         height: 30px;
          background-color: #fff;
-         border-radius: 5px;
+        border-radius: 20px;
          cursor: pointer;
      }
 
@@ -3317,10 +3320,10 @@
          position: absolute;
          top: 26px;
          right: 20px;
-         width: 25px;
-         height: 25px;
+         width: 30px;
+         height: 30px;
          background-color: #fff;
-         border-radius: 5px;
+         border-radius: 20px;
          cursor: pointer;
      }
 
@@ -3488,10 +3491,10 @@
          position: absolute;
          top: 26px;
          right: 20px;
-         width: 25px;
-         height: 25px;
+         width: 30px;
+         height: 30px;
          background-color: #fff;
-         border-radius: 5px;
+         border-radius: 20px;
          cursor: pointer;
      }
 
@@ -3622,6 +3625,9 @@
 
      .footer .footerContent .newsletter form input {
          width: 100%;
+     }
+     .packages .packageCard .tourInfo .packageInclude .include p{
+        font-size: 13px;
      }
 
  }
