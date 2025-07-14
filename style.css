@@ -2915,7 +2915,7 @@
      .testimonial .testimonialContent {
          flex-direction: column;
          gap: 40px;
-         height: 100%;
+         height: auto;
      }
 
      .testimonial .leftContent {
