@@ -746,7 +746,7 @@
                 </div>
                 <div class="swiper customerMessages">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide message active">
+                        <div class="swiper-slide message">
                             <div class="review">
                                 <div class="userAndMessages">
                                     <div class="userAndRate">
@@ -786,6 +786,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="swiper-slide message">
                             <div class="review">
                                 <div class="userAndMessages">
@@ -803,15 +804,14 @@
                                                 <p>4.7</p>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="userMessage">
                                         <p>I had the most amazing solo backpacking adventure through Ladakh with Travel.
-                                            The
-                                            accommodations were comfortable, the transportation was reliable, and the
-                                            local
-                                            experiences were authentic. The company was also very responsive and helpful
-                                            with any questions or concerns I had. Definitely recommend!</p>
+                                            The accommodations were comfortable, the transportation was reliable, and
+                                            the
+                                            local experiences were authentic. The company was very responsive and
+                                            helpful
+                                            with any questions or concerns. Definitely recommend!</p>
                                     </div>
                                 </div>
                                 <div class="indicaters">
@@ -828,8 +828,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="message">
-                            <div class="swiper-slide review">
+
+                        <div class="swiper-slide message">
+                            <div class="review">
                                 <div class="userAndMessages">
                                     <div class="userAndRate">
                                         <div class="user">
@@ -849,10 +850,9 @@
                                     <div class="userMessage">
                                         <p>We booked a family vacation to Rajasthan with Travel and it exceeded our
                                             expectations. The kids loved the camel safari and the elephant ride. Our
-                                            guide,
-                                            Smith, was patient and engaging. The forts and palaces were breathtaking. It
-                                            was
-                                            a truly unforgettable experience.</p>
+                                            guide, Smith, was patient and engaging. The forts and palaces were
+                                            breathtaking.
+                                            A truly unforgettable experience.</p>
                                     </div>
                                 </div>
                                 <div class="indicaters">
@@ -1118,6 +1118,24 @@
             crossFade: true
         },
     });
+
+    const Msgswiper = new Swiper('.customerMessages', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 2000,
+        },
+         effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     clickable: true,
+        // },
+    });
+
 </script>
 
 </html>

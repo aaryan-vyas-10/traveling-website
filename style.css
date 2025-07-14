@@ -26,6 +26,7 @@
  }
 
  header .navbar {
+    width: 90%;
      height: 80px;
      margin: 0px auto;
      display: flex;
@@ -1512,8 +1513,8 @@
 
  .testimonial .customerMessages {
      width: 50%;
- }
 
+ }
  .testimonial .customerMessages .message {
      width: 100%;
      height: 360px;
@@ -1523,16 +1524,14 @@
      box-sizing: border-box;
      display: flex;
      background-color: rgba(254, 245, 230, 1);
-     display: none;
-     opacity: 0;
      transition: opacity 0.5s ease-in-out;
      z-index: 1;
  }
 
- .testimonial .customerMessages .message.active {
+ /* .testimonial .customerMessages .message.active {
      display: block;
      opacity: 1;
- }
+ } */
 
  .testimonial .customerMessages .message .review {
      width: 100%;
@@ -2179,7 +2178,7 @@
      }
  }
 
- @media(max-width:1200px) {
+ @media(max-width:1199px) {
      .adventureSection .advantureContent {
          flex-direction: column;
          height: auto;
