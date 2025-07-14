@@ -1764,15 +1764,20 @@
 
  .blogSection .blogContent .blogs {
      display: flex;
+     align-items: center;
+     justify-content: center;
      padding-top: 47px;
+     padding-bottom: 2px;
      overflow: hidden;
      margin: 0px auto;
      scroll-behavior: smooth;
      user-select: none;
+     /* border: 1px solid red; */
  }
 
  .blogSection .blogs .blog:hover {
-     box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+     /* box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2); */
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
      transform: scaleY(1.001);
  }
 
