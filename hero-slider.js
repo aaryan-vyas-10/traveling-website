@@ -53,3 +53,18 @@ setInterval(() => {
 }, 5000);
 
 showImg(index);
+
+
+
+
+// const messages = document.querySelectorAll('.message');
+// const totalMessages = messages.length;
+// let currentIndex = 0;
+
+// function showNextMessage() {
+//     messages[currentIndex].classList.remove('active');
+//     currentIndex = (currentIndex + 1) % totalMessages;
+//     messages[currentIndex].classList.add('active');
+// }
+
+// setInterval(showNextMessage, 3000);

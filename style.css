@@ -98,7 +98,7 @@
  header .navbar .menus li a {
      text-decoration: none;
      font-size: 16px;
-     font-weight: 600;
+     font-weight: 500;
      color: #fff;
      line-height: 19px;
  }
@@ -440,13 +440,10 @@
      overflow: hidden;
      user-select: none;
      scroll-behavior: smooth;
-     border: 1px solid red  ;
  }
 
  .trendingDestinations .imageSlider .swiper-wrapper {
      display: flex;
-
-
  }
 
  .trendingDestinations .imageSlider::-webkit-scrollbar {
@@ -552,7 +549,7 @@
      font-weight: 500;
      font-size: 16px;
      line-height: 24px;
-     color: rgba(94, 98, 130, 1);
+     color: rgba(70, 69, 73, 1);
  }
 
  .adventureSection .adventureInformation .adventureHeading h1 {
@@ -732,6 +729,7 @@
      font-weight: 500;
      line-height: 24px;
      letter-spacing: 0px;
+     color: rgba(70, 69, 73, 1) ;
  }
 
  .tourPackages .container .heading .headingBtns {
@@ -1032,7 +1030,9 @@
 
  .destinations {
      width: 100%;
+     height: 890px;
      background-color: white;
+     /* border: 1px solid red; */
  }
 
  .destinations .destinationContent {
@@ -1086,14 +1086,12 @@
  .destinations .container .images .left img {
      width: 100%;
      height: 100%;
-
  }
 
  .destinations .container .images .right img {
      width: 100%;
      height: 100%;
      border-radius: 30px;
-
  }
 
  .destinations .container .images .right .right-2 img {
@@ -1127,14 +1125,24 @@
  .destinations .destinationContent .images .card img {
      object-fit: cover;
      border-radius: 30px;
+     /* border: 1px solid red; */
  }
-
+.destinations .destinationContent .images .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* width: 100%;
+    height: 100%; */
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    border-radius: 30px; 
+}
  .destinations .images .left .left-1 .cardOne {
      border-radius: 30px;
      position: relative;
-
  }
-
+.text{
+    z-index: 1;
+}
  .destinations .images .left .left-1 .cardOne .text {
      position: absolute;
      bottom: 20px;
@@ -1143,6 +1151,7 @@
      flex-direction: column;
      left: 24px;
      box-sizing: border-box;
+     z-index: 1;
  }
 
  .destinations .images .left .left-1 .cardOne .text h3 {
@@ -1730,6 +1739,7 @@
      font-weight: 500;
      font-size: 16px;
      line-height: 24px;
+     color: rgba(70, 69, 73, 1);
  }
 
  .blogSection .blogHeading .indicators {
@@ -2161,6 +2171,7 @@
 
      .destinations {
          width: 100%;
+         height: auto;
      }
 
      .destinations .destinationContent {
