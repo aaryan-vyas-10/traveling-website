@@ -175,15 +175,15 @@
  }
 
  .swiper-slide.slide-1 {
-     background-image: linear-gradient(rgba(32, 35, 38, 0.5)), url('img/main.jpg');
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url('img/main.jpg');
  }
 
  .swiper-slide.slide-2 {
-     background-image: linear-gradient(rgba(32, 35, 38, 0.5)), url('img/slider-2.jpg');
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url('img/slider-2.jpg');
  }
 
  .swiper-slide.slide-3 {
-     background-image: linear-gradient(rgba(32, 35, 38, 0.5)), url('img/slider-3.jpg');
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url('img/slider-3.jpg');
  }
 
  .swiper-pagination {
@@ -274,8 +274,9 @@
  }
 
  .searchBar {
-
-     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+     /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); */
+     box-shadow: 0px 14px 36px 3px rgba(150, 150, 161, 0.18);
+     /* x y blur spread */
      box-sizing: border-box;
      width: 824.02px;
      height: 82px;
@@ -350,7 +351,6 @@
  }
 
  .trendingDestinations {
-
      width: 100%;
      height: 653px;
      background-color: rgba(254, 245, 230, 1);
@@ -359,9 +359,6 @@
  }
 
  .trendingDestinations .heading {
-
-     width: 1320px;
-     height: 104px;
      display: flex;
      align-items: flex-start;
      justify-content: space-between;
@@ -370,7 +367,6 @@
  }
 
  .trendingDestinations .heading .headingText {
-
      width: 645px;
      height: 104px;
      gap: 8px;
@@ -381,16 +377,14 @@
  }
 
  .trendingDestinations .heading .headingText h1 {
-
      font-size: 40px;
-
      font-weight: 700;
      line-height: 48px;
      color: rgba(45, 44, 47, 1);
  }
 
  .trendingDestinations .heading .headingText p {
-
+     color: rgba(70, 69, 73, 1);
      font-size: 16px;
      font-weight: 500;
      line-height: 24px;
@@ -412,14 +406,27 @@
      border: 1px solid rgba(32, 35, 38, 1);
      padding: 8px;
      display: flex;
+     align-items: center;
+     justify-content: center;
      background-color: transparent;
      cursor: pointer;
+     transition: 0.5s;
  }
 
- .trendingDestinations .heading .headingBtns .headingBtn2 {
-     background-color: rgba(32, 35, 38, 1);
+ .trendingDestinations .heading .headingBtns button i {
+     font-size: 20px;
  }
 
+ .trendingDestinations .heading .headingBtns button:hover,
+ .i {
+     background-color: black;
+     color: white;
+ }
+
+ /* .trendingDestinations .heading .headingBtns button.swiper-button-disabled {
+    color: black;
+    background-color: white;
+} */
  .trendingDestinations .imageSlider {
      width: 1320px;
      height: 300px;
@@ -445,7 +452,6 @@
  }
 
  .trendingDestinations .imageSlider .place {
-
      width: 180px;
      height: 300px;
      gap: 16px;
@@ -454,7 +460,32 @@
      flex-direction: column;
      align-items: center;
      justify-content: center;
+     position: relative;
 
+ }
+
+ /* .trendingDestinations .imageSlider .place:hover{
+    background: linear-gradient((rgba(32, 35, 38, 0.5), rgba(32, 35, 38, 0.5)));
+ } */
+ .trendingDestinations .imageSlider .place::after {
+     content: '';
+     position: absolute;
+     top: 0;
+     width: 180px;
+     height: 260px;
+     background: url('img/hover-button-places.png');
+     background-position: center;
+     background-repeat: no-repeat;
+     opacity: 0;
+     transition: opacity 0.3s ease;
+     margin: 0px auto;
+     border-radius: 100px;
+     cursor: pointer;
+ }
+
+ .trendingDestinations .imageSlider .place:hover::after {
+     opacity: 1;
+     background-color: rgba(32, 35, 38, 0.5);
  }
 
  .trendingDestinations .imageSlider .swiper-slide {
@@ -463,11 +494,11 @@
  }
 
  .trendingDestinations .imageSlider .place img {
-
      width: 180px;
      height: 260px;
      cursor: pointer;
  }
+
 
  .trendingDestinations .imageSlider .place p {
 
@@ -475,9 +506,6 @@
      font-size: 20px;
      line-height: 24px;
  }
-
-
-
 
  .adventureSection {
      width: 100%;
@@ -723,9 +751,6 @@
      cursor: pointer;
  }
 
- .tourPackages .container .heading .headingBtns .headingBtn2 {
-     background-color: rgba(32, 35, 38, 1);
- }
 
  .tourPackages .packages::-webkit-scrollbar {
      display: none;
@@ -753,12 +778,14 @@
  }
 
  .packages .packageCard:hover {
-     box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
-     transform: scaleY(1.001);
+     /* box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2); */
+     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
  }
 
  .packages .packageCard:hover .tourPrice button {
      background-color: rgba(236, 145, 5, 1);
+     color: #fff;
+     border: 1px solid rgba(236, 145, 5, 1);
  }
 
 
@@ -922,8 +949,6 @@
  }
 
  .packages .packageCard .tourPrice .price {
-     width: 138px;
-     height: 24px;
      gap: 4px;
      display: flex;
      align-items: center;
@@ -979,11 +1004,15 @@
      background-repeat: no-repeat;
  }
 
- .packages .packageCard .tourPrice button img {
+ .packages .packageCard .tourPrice button i {
+     font-size: 12px;
+ }
+
+ /* .packages .packageCard .tourPrice button img {
      width: 16px;
      height: 16px;
      cursor: pointer;
- }
+ } */
 
  .packages .packageCard .likeIcon {
      position: absolute;
@@ -1011,6 +1040,8 @@
  }
 
  .destinations .container .heading {
+     width: 870px;
+     height: auto;
      margin: 0px auto;
  }
 
@@ -1660,17 +1691,18 @@
  }
 
  .blogSection {
-
+     /* border: 1px solid red; */
      width: 100%;
      height: 832px;
      background-color: rgba(254, 245, 230, 1);
  }
 
  .blogSection .blogContent {
-     width: 1320px;
+     width: 100%;
      height: 832px;
      display: flex;
      flex-direction: column;
+     /* border: 1px solid red; */
  }
 
  .blogSection .blogHeading {
@@ -1682,7 +1714,6 @@
  }
 
  .blogSection .blogHeading .text {
-
      gap: 8px;
      display: flex;
      flex-direction: column;
@@ -1741,12 +1772,12 @@
 
  .blogSection .blogs .swiper-wrapper {
      display: flex;
-
      width: 1320px;
  }
 
  .blogSection .blogs .blog {
-     width: 420px;
+     /* width: 420px; */
+     flex: 1 1 420px;
      height: 450px;
      border-radius: 30px;
      padding: 16px;
@@ -1839,7 +1870,6 @@
  }
 
  .footer {
-
      width: 100%;
      height: 400px;
      background-color: rgba(32, 35, 38, 1);
@@ -2198,6 +2228,9 @@
      .destinations .destinationContent .images .card {
          width: 300px;
          height: 300px;
+     }
+     .destinations .container .heading{
+        width: 90%;
      }
  }
 
@@ -2862,6 +2895,7 @@
 
      .destinations .destinationContent .images .card {
          height: 250px;
+         background: rgba(0, 0, 0, 2);
      }
 
      .destinations .h3 {
