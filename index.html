@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Website</title>
+    <link rel="icon" href="img/Logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/d94ba61043.js" crossorigin="anonymous"></script>
@@ -892,9 +893,7 @@
                 <div class="swiper blogs">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide blog">
-
                             <img src="img/blog-1.png" alt="" />
-
                             <div class="textBlog">
                                 <h1>Uncover Hidden Gems: Off-the-Beaten-Path Destinations</h1>
                                 <p>Discover lesser-known travel treasures.Explore authentic cultures and breathtaking
@@ -931,6 +930,7 @@
                                 <p>Read More</p>
                             </button>
                         </div>
+                        
                     </div>
                 </div>
                 <button class="allBlogButton">
@@ -1001,8 +1001,8 @@
 
 </body>
 
-<script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
 <script>
     const swiper = new Swiper('.swiper.imageSlider', {
         slidesPerView: 6,
@@ -1072,10 +1072,9 @@
         }
     });
 
-    const blogsSwiper = new Swiper('.blogs', {
-        slidesPerView: 3,
-        slidesPerGroup: 1,
-        spaceBetween: 30,
+    const blogsSwiper = new Swiper('.swiper.blogs', {
+        // slidesPerView: 3,
+        spaceBetween: 20,
         loop: true,
         navigation: {
             nextEl: '.blogs-next',
@@ -1122,7 +1121,6 @@
     const Msgswiper = new Swiper('.customerMessages', {
         loop: true,
         slidesPerView: 1,
-        spaceBetween: 20,
         autoplay: {
             delay: 2000,
         },
@@ -1130,10 +1128,6 @@
         fadeEffect: {
             crossFade: true
         },
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     clickable: true,
-        // },
     });
 
 </script>

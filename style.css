@@ -23,10 +23,10 @@
      max-width: 1320px;
      width: 90%;
      margin: 0px auto;
+     /* border: 1px solid red; */
  }
 
  header .navbar {
-    width: 90%;
      height: 80px;
      margin: 0px auto;
      display: flex;
@@ -513,11 +513,9 @@
 
  .adventureSection .advantureContent {
      height: 549px;
-
      margin: 80px auto;
      display: flex;
-
-     gap: 50px;
+     gap: 30px;
      box-sizing: border-box;
 
  }
@@ -779,7 +777,8 @@
 
  .packages .packageCard:hover {
      /* box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2); */
-     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+     /* box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2); */
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
  }
 
  .packages .packageCard:hover .tourPrice button {
@@ -1095,7 +1094,7 @@
  }
 
  .destinations .container .images .right .right-2 img {
-     aspect-ratio: 3/3;
+     /* aspect-ratio: 3/3; */
  }
 
  .destinations .container .images .left .left-1 {
@@ -1388,6 +1387,8 @@
      color: rgba(255, 255, 255, 1);
      border: none;
      cursor: pointer;
+     box-shadow: 0px 14px 36px 3px rgba(236, 145, 5, 0.18);
+
  }
 
  .destinations .container button img {
@@ -1702,13 +1703,13 @@
  .blogSection {
      /* border: 1px solid red; */
      width: 100%;
-     height: 832px;
+     /* height: 832px; */
      background-color: rgba(254, 245, 230, 1);
  }
 
  .blogSection .blogContent {
-     width: 100%;
-     height: 832px;
+     /* width: 100%; */
+     /* height: 832px; */
      display: flex;
      flex-direction: column;
      /* border: 1px solid red; */
@@ -1772,6 +1773,7 @@
      margin: 0px auto;
      scroll-behavior: smooth;
      user-select: none;
+     /* border: 1px solid orange; */
      /* border: 1px solid red; */
  }
 
@@ -1786,13 +1788,17 @@
  }
 
  .blogSection .blogs .swiper-wrapper {
-     display: flex;
-     width: 1320px;
+        /* border: 1px solid red; */
+        width: 1320px;
+        box-sizing: border-box;
  }
-
+ /* .blogSection .blogs .swiper-wrapper .swiper-slide{
+    max-width: 420px !important;
+ } */
  .blogSection .blogs .blog {
-     /* width: 420px; */
-     flex: 1 1 420px;
+    width: 100%;
+    max-width: 420px !important;
+     /* flex: 1 1 420px !important; */
      height: 450px;
      border-radius: 30px;
      padding: 16px;
@@ -1803,6 +1809,7 @@
      cursor: pointer;
      overflow: hidden;
      transition: 0.4s ease-in-out;
+     /* border: 2px solid green; */
  }
 
  .blogSection .blogs .blog img {
@@ -1882,6 +1889,8 @@
      color: rgba(255, 255, 255, 1);
      cursor: pointer;
      margin: 40px auto;
+     box-shadow: 0px 14px 36px 3px rgba(236, 145, 5, 0.18);
+
  }
 
  .footer {
@@ -2202,11 +2211,13 @@
      }
 
      .adventureSection .advantureContent .contentDiv {
-
-         width: 95%;
+        /* border: 2px solid green; */
+         width:max-content;
          margin: 0px auto;
      }
-
+     .adventureSection .advantureContent .adventureInformation{
+        width: 100%;
+     }
      .adventureSection .advantureContent .advantureImgages .advanturePersonImage {
          margin: 60px auto 0px;
          width: 100%;
@@ -2242,7 +2253,7 @@
      }
 
      .destinations .destinationContent .images .card {
-         width: 300px;
+         width: 280px;
          height: 300px;
      }
      .destinations .container .heading{
@@ -2452,7 +2463,6 @@
      }
 
      .trendingDestinations .heading {
-         width: 90%;
          height: 104px;
          display: block;
          padding-top: 90px;
@@ -2469,7 +2479,7 @@
      }
 
      .trendingDestinations .imageSlider {
-         width: 90%;
+        width: 100%;
          height: 300px;
      }
 
@@ -2756,6 +2766,12 @@
      .blogSection .allBlogButton {
          margin: 30px auto;
      }
+     .adventureSection .advantureContent .contentDiv {
+        /* border: 2px solid green; */
+         width:100%;
+         margin: 0px auto;
+     }
+     
  }
 
  @media (min-width:576px) and (max-width:767px) {
@@ -2874,7 +2890,6 @@
      }
 
      .trendingDestinations .heading {
-         width: 90%;
          height: 104px;
          display: flex;
          padding-top: 121px;
@@ -2883,7 +2898,6 @@
 
      .trendingDestinations .heading .headingBtns {
          width: 92px;
-
          height: 38px;
          gap: 16px;
          align-items: center;
@@ -2893,7 +2907,6 @@
      }
 
      .trendingDestinations .imageSlider {
-         width: 90%;
          height: 300px;
      }
 
@@ -2902,13 +2915,15 @@
      }
 
      .trendingDestinations .heading .headingText h1 {
-         font-size: 32px;
+         font-size: 30px;
      }
 
      .tourPackages .container .heading .headingText h1 {
-         font-size: 32px;
+         font-size: 30px;
      }
-
+     .destinations .container .heading .text h1{
+        font-size: 30px;
+     }
      .destinations .destinationContent .images .card {
          height: 250px;
          background: rgba(0, 0, 0, 2);
@@ -2925,10 +2940,13 @@
 
      .destinations .destinationContent .images .card {
 
-         width: 170px;
+         width: 160px;
          height: 250px;
      }
-
+     .testimonial .leftContent .testimonialHeading .text h1{
+        font-size: 30px;
+        line-height: 40px;
+     }
      .testimonial .testimonialContent {
          flex-direction: column;
          gap: 40px;
@@ -2985,6 +3003,18 @@
 
      .tourPackages .packages {
          margin: 38px auto;
+     }
+     .adventureSection .adventureInformation .adventureHeading h1{
+        font-size: 30px;
+        line-height: 38px;
+     }
+     .blogSection .blogHeading .text h1{
+        font-size: 30px;
+     }
+     .adventureSection .advantureContent .contentDiv {
+        /* border: 2px solid green; */
+         width:100%;
+         margin: 0px auto;
      }
  }
 
@@ -3055,13 +3085,11 @@
      }
 
      .trendingDestinations .heading {
-         width: 90%;
          height: 104px;
          padding-top: 121px;
      }
 
      .trendingDestinations .imageSlider {
-         width: 90%;
          height: 300px;
      }
 
@@ -3201,13 +3229,12 @@
      }
 
      .trendingDestinations .heading {
-         width: 90%;
          height: 104px;
          padding-top: 121px;
      }
 
      .trendingDestinations .imageSlider {
-         width: 90%;
+         /* width: 90%; */
          height: 300px;
      }
 
@@ -3268,12 +3295,10 @@
      }
 
      .trendingDestinations .heading {
-         width: 90%;
          height: 104px;
      }
 
      .trendingDestinations .imageSlider {
-         width: 90%;
          height: 300px;
      }
 
