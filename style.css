@@ -429,7 +429,7 @@
     background-color: white;
 } */
  .trendingDestinations .imageSlider {
-     width: 1320px;
+     /* width: 1320px; */
      height: 300px;
      gap: 20px;
      display: flex;
@@ -440,6 +440,7 @@
      overflow: hidden;
      user-select: none;
      scroll-behavior: smooth;
+     border: 1px solid red  ;
  }
 
  .trendingDestinations .imageSlider .swiper-wrapper {
