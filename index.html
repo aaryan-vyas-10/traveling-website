@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Website</title>
-    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="icon" href="img/Logo (1).png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/d94ba61043.js" crossorigin="anonymous"></script>
@@ -930,34 +930,6 @@
                                 <p>Read More</p>
                             </button>
                         </div>
-                        <div class="swiper-slide blog">
-
-                            <img src="img/blog-2.png" alt="" />
-
-                            <div class="textBlog">
-                                <h1>Sustainable Travel: Making a Positive Impact</h1>
-                                <p>Conscious travel choices matter. Learn how to minimize your carbon footprint while
-                                    exploring
-                                    the world. Discover eco-friendly destinations and responsible tourism practices.</p>
-                            </div>
-                            <button>
-                                <p>Read More</p>
-                            </button>
-                        </div>
-                         <!-- <div class="swiper-slide blog">
-
-                            <img src="img/blog-2.png" alt="" />
-
-                            <div class="textBlog">
-                                <h1>Sustainable Travel: Making a Positive Impact</h1>
-                                <p>Conscious travel choices matter. Learn how to minimize your carbon footprint while
-                                    exploring
-                                    the world. Discover eco-friendly destinations and responsible tourism practices.</p>
-                            </div>
-                            <button>
-                                <p>Read More</p>
-                            </button>
-                        </div> -->
                     </div>
                 </div>
                 <button class="allBlogButton">
@@ -1100,29 +1072,29 @@
     });
 
     const blogsSwiper = new Swiper('.swiper.blogs', {
-        spaceBetween: 0,
+        spaceBetween: 30,
         loop: true,
         navigation: {
             nextEl: '.blogs-next',
             prevEl: '.blogs-prev',
         },
-        breakpoints: {
-            320: {
-                slidesPerView: 1.25,
-            },
-            576: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 2,
-            },
-            1200: {
-                slidesPerView: 3,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.25,
+                },
+                576: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 2,
+                },
+                1200: {
+                    slidesPerView: 3,
+                }
             }
-        }
     });
 
     const swiperHero = new Swiper(".heroSwiper", {
