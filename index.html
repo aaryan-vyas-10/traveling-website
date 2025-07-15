@@ -930,7 +930,34 @@
                                 <p>Read More</p>
                             </button>
                         </div>
-                        
+                        <div class="swiper-slide blog">
+
+                            <img src="img/blog-2.png" alt="" />
+
+                            <div class="textBlog">
+                                <h1>Sustainable Travel: Making a Positive Impact</h1>
+                                <p>Conscious travel choices matter. Learn how to minimize your carbon footprint while
+                                    exploring
+                                    the world. Discover eco-friendly destinations and responsible tourism practices.</p>
+                            </div>
+                            <button>
+                                <p>Read More</p>
+                            </button>
+                        </div>
+                         <!-- <div class="swiper-slide blog">
+
+                            <img src="img/blog-2.png" alt="" />
+
+                            <div class="textBlog">
+                                <h1>Sustainable Travel: Making a Positive Impact</h1>
+                                <p>Conscious travel choices matter. Learn how to minimize your carbon footprint while
+                                    exploring
+                                    the world. Discover eco-friendly destinations and responsible tourism practices.</p>
+                            </div>
+                            <button>
+                                <p>Read More</p>
+                            </button>
+                        </div> -->
                     </div>
                 </div>
                 <button class="allBlogButton">
@@ -1073,8 +1100,7 @@
     });
 
     const blogsSwiper = new Swiper('.swiper.blogs', {
-        // slidesPerView: 3,
-        spaceBetween: 20,
+        spaceBetween: 0,
         loop: true,
         navigation: {
             nextEl: '.blogs-next',
@@ -1085,7 +1111,7 @@
                 slidesPerView: 1.25,
             },
             576: {
-                slidesPerView: 1.5,
+                slidesPerView: 2,
             },
             768: {
                 slidesPerView: 2,
